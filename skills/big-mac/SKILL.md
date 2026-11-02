@@ -8,12 +8,14 @@ The public source of operational knowledge is `ThatXliner/big-mac`, normally at
 checkout and SSH alias. Run host commands over SSH, not on the client Mac.
 
 1. Read `docs/operations.md` in the checkout for ownership exceptions. Get the
-   concise live index with `vanityctl agent-context` and inspect the requested
-   target with `vanityctl status NAME --json`. Use `scripts/manage.py list` and
-   `docs/services.md` to find services outside the registry; avoid broad searches.
+   focused context with `vanityctl agent-context NAME --json` and inspect the requested
+   target with `vanityctl status NAME --json`. If its name is unknown, use
+   `vanityctl list --json` and `vanityctl discover QUERY --json` before consulting
+   `docs/services.md` or searching the host. Discovery never adopts resources.
 2. Use `vanityctl` for registered workloads. `start` runs Compose **start**, so
    initial creation or a Compose config change needs targeted
-   `python3 scripts/manage.py up PROJECT`. Do not use global `vanityctl apply`
+   `vanityctl up PROJECT`. The Python wrapper now delegates to the same command.
+   Do not use global `vanityctl apply`
    as a discovery step. Existing custom image tags may be local security rebuilds;
    preserve them until their build provenance is understood.
 3. For unmanaged native services, target the inventoried label with
@@ -32,4 +34,6 @@ checkout and SSH alias. Run host commands over SSH, not on the client Mac.
 For a move or backup, read `docs/migration.md` and use `scripts/migration.py`.
 For a fresh Mac, follow the README bootstrap. For Linux, read `nix/README.md`;
 the NixOS module covers host tooling and unblock, not every native Mac workload.
-Keep the canonical skill here; `scripts/install-skill.py` links it into Codex.
+Keep the canonical host skill here; `scripts/install-skill.py` links it into Codex.
+The reusable upstream operations skill is at `vendor/vanityctl/skills/vanityctl/SKILL.md`;
+`vanityctl install --codex-skill` installs it alongside this host-specific skill.

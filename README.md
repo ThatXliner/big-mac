@@ -14,7 +14,7 @@ See the [service catalog](docs/services.md) and full [metadata snapshot](invento
 ```sh
 ssh big-mac
 cd ~/Developer/big-mac
-vanityctl agent-context
+vanityctl agent-context unblock --json
 python3 scripts/manage.py list
 python3 scripts/manage.py status
 vanityctl status unblock --json
@@ -37,14 +37,15 @@ git clone --recurse-submodules https://github.com/ThatXliner/big-mac.git
 cd big-mac
 bash scripts/bootstrap-macos.sh --install
 # Start OrbStack / your Docker engine before continuing.
-python3 scripts/install-hostd.py --start
+vanityctl install --start --codex-skill
 python3 scripts/setup-unblock.py
 python3 scripts/check-unblock.py
 ```
 
 Use `~/Developer/big-mac` for the checkout if you want the same default location;
 the setup scripts resolve their own checkout path. Homebrew must already be
-installed. The bootstrap installs tooling and vanityctl; it does not clone or
+installed. The bootstrap installs tooling and vanityctl into `~/.local/bin` by default
+(override `VANITYCTL_INSTALL_ROOT` and keep its `bin` on PATH). It does not clone or
 configure my private applications. On an existing machine use `--check` first;
 the hostd installer refuses to overwrite an existing agent/configuration.
 
@@ -55,7 +56,7 @@ documents the variables. Publish through your own Cloudflare tunnel using the
 [example config](examples/cloudflared.yml) and route script described in operations.
 The existing installation is at **https://unblock.bryanhu.com**.
 It currently allows anonymous access. To use that mode on your own installation,
-set `UNBLOCK_USERPASS=` in the private `.env` and run `python3 scripts/manage.py up unblock`.
+set `UNBLOCK_USERPASS=` in the private `.env` and run `vanityctl up unblock`.
 
 To manage your own apps, copy/adapt [examples/vanityctl.yaml](examples/vanityctl.yaml)
 on a fresh host, or add service fragments to an existing registry. Keep credentials

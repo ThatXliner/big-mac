@@ -24,6 +24,6 @@ if fragment.exists() and json.loads(fragment.read_text()) != desired:
     raise SystemExit("Existing unblock fragment differs; inspect it before replacing")
 fragment.write_text(json.dumps(desired, indent=2) + "\n")  # JSON is valid YAML.
 subprocess.run(["vanityctl", "config", "validate"], check=True)
-# vanityctl start delegates to `compose start`: initial creation needs `up`.
-subprocess.run(["docker", "compose", "--project-directory", str(env.parent), "up", "-d"], check=True)
+# Reconcile just this registered stack, including private environment changes.
+subprocess.run(["vanityctl", "up", "unblock"], check=True)
 subprocess.run(["vanityctl", "status", "unblock"], check=True)

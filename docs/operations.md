@@ -1,7 +1,9 @@
 # Operations
 
 Run commands on the service host, from this checkout. `vanityctl agent-context`
-gives a concise service index. `scripts/manage.py` handles existing Compose,
+gives a concise service index. `vanityctl agent-context NAME --json` gives focused
+operational context; `vanityctl discover QUERY --json` finds existing unregistered
+resources without changing them. `scripts/manage.py` handles existing Compose,
 native launchd, and standalone Docker targets using the same inventory.
 
 ```sh
@@ -61,10 +63,11 @@ changing tunnel ownership. The unblock installation restarted only the live
 
 Docker's restart policies and existing launch agents remain the startup owners.
 `vanityctl start` invokes Compose `start`, which cannot create a missing container.
-Initial creation and config/image changes use targeted Compose `up -d`:
+Initial creation and config/image changes use targeted `vanityctl up`, which
+re-reads Compose environment files and preserves registered overlay order:
 
 ```sh
-python3 scripts/manage.py up unblock
+vanityctl up unblock
 ```
 
 The unblock image is pinned to the tested digest. To update, pull and inspect the

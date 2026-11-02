@@ -87,7 +87,7 @@ def main():
         run(commands[a.action])
         return
     registry = json.loads(subprocess.check_output(["vanityctl", "list", "--json"], text=True))
-    if a.target in {s["name"] for s in registry} and a.action != "up":
+    if a.target in {s["name"] for s in registry}:
         run(["vanityctl", a.action, a.target])
     else:
         # Up is deliberately targeted; never apply all unrelated services.
