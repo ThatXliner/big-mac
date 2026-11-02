@@ -187,6 +187,13 @@
       "image_id": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
       "mounts": [
         {
+          "destination": "/var/lib/postgresql/data",
+          "source": "/var/lib/docker/volumes/attention_attention-db/_data",
+          "type": "volume",
+          "volume": "attention_attention-db",
+          "writable": true
+        },
+        {
           "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
           "source": "~/Developer/attention/docker/roles.sql",
           "type": "bind",
@@ -198,13 +205,6 @@
           "source": "/var/lib/docker/volumes/attention_attention-db-config/_data",
           "type": "volume",
           "volume": "attention_attention-db-config",
-          "writable": true
-        },
-        {
-          "destination": "/var/lib/postgresql/data",
-          "source": "/var/lib/docker/volumes/attention_attention-db/_data",
-          "type": "volume",
-          "volume": "attention_attention-db",
           "writable": true
         }
       ],
@@ -505,8 +505,8 @@
         "TAVILY_API_KEY",
         "YARN_VERSION"
       ],
-      "image": "ghcr.io/billion-app/billion-scraper:f7051edc8eec25f25ac4c5ccdb9d43c47772b216",
-      "image_id": "sha256:418a439ae2222072ae099a6df57dccf315688b6dd68820a90ad39dbdbbcee4db",
+      "image": "ghcr.io/billion-app/billion-scraper:e08f913a7f80ee20a7b7bd24f097f201319edf39",
+      "image_id": "sha256:4c7c675e93e9096c38482ba6201319f353a7cc5cad22fc22c6789e700fec478c",
       "mounts": [
         {
           "destination": "/var/lib/billion",
@@ -519,7 +519,7 @@
       "name": "billion-supervisor",
       "ports": {},
       "repo_digests": [
-        "ghcr.io/billion-app/billion-scraper@sha256:418a439ae2222072ae099a6df57dccf315688b6dd68820a90ad39dbdbbcee4db"
+        "ghcr.io/billion-app/billion-scraper@sha256:4c7c675e93e9096c38482ba6201319f353a7cc5cad22fc22c6789e700fec478c"
       ],
       "restart": "no",
       "state": "running"
@@ -650,34 +650,6 @@
       "image_id": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
       "mounts": [
         {
-          "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
-          "source": "~/.config/billion/supabase-trial/volumes/db/webhooks.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
-          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
-          "source": "~/.config/billion/supabase-trial/volumes/db/jwt.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
-          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
-          "source": "~/.config/billion/supabase-trial/volumes/db/roles.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
-          "destination": "/docker-entrypoint-initdb.d/migrations/99-realtime.sql",
-          "source": "~/.config/billion/supabase-trial/volumes/db/realtime.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
           "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
           "source": "~/.config/billion/supabase-trial/volumes/db/_supabase.sql",
           "type": "bind",
@@ -708,6 +680,34 @@
         {
           "destination": "/var/lib/postgresql/data",
           "source": "~/.config/billion/supabase-trial/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/webhooks.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/jwt.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/roles.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-realtime.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/realtime.sql",
           "type": "bind",
           "volume": null,
           "writable": true
@@ -1108,18 +1108,18 @@
       "image_id": "sha256:79e14a5ea61a3a13d4335a7abd04242893f90e83785c6d6225b9c9e5ceb65c4a",
       "mounts": [
         {
-          "destination": "/app/server.mjs",
-          "source": "~/Developer/blog-likes/server.mjs",
-          "type": "bind",
-          "volume": null,
-          "writable": false
-        },
-        {
           "destination": "/data",
           "source": "~/Developer/blog-likes/data",
           "type": "bind",
           "volume": null,
           "writable": true
+        },
+        {
+          "destination": "/app/server.mjs",
+          "source": "~/Developer/blog-likes/server.mjs",
+          "type": "bind",
+          "volume": null,
+          "writable": false
         }
       ],
       "name": "blog-likes-likes-1",
@@ -1212,6 +1212,34 @@
       "image_id": "sha256:af083ef64d0408c8f098ee6f5c364a59b26f36fbc0f3a334a62c5c1d57362e9b",
       "mounts": [
         {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/jwt.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/_supabase.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-pooler.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/pooler.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
           "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
           "source": "~/Developer/church-retreat-supabase/docker/volumes/db/webhooks.sql",
           "type": "bind",
@@ -1244,34 +1272,6 @@
           "source": "/var/lib/docker/volumes/church-retreat_db-config/_data",
           "type": "volume",
           "volume": "church-retreat_db-config",
-          "writable": true
-        },
-        {
-          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
-          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/jwt.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
-          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
-          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/_supabase.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
-          "destination": "/docker-entrypoint-initdb.d/migrations/99-pooler.sql",
-          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/pooler.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
-          "destination": "/var/lib/postgresql/data",
-          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/data",
-          "type": "bind",
-          "volume": null,
           "writable": true
         }
       ],
@@ -1961,15 +1961,15 @@
       "image_id": "sha256:48e759747f0febe39c7134bd3ad576d8ce0624277685e0738a3237f5bad555da",
       "mounts": [
         {
-          "destination": "/home/kong/kong-entrypoint.sh",
-          "source": "~/Developer/grindion-supabase/volumes/api/kong-entrypoint.sh",
+          "destination": "/home/kong/temp.yml",
+          "source": "~/Developer/grindion-supabase/volumes/api/kong.yml",
           "type": "bind",
           "volume": null,
           "writable": false
         },
         {
-          "destination": "/home/kong/temp.yml",
-          "source": "~/Developer/grindion-supabase/volumes/api/kong.yml",
+          "destination": "/home/kong/kong-entrypoint.sh",
+          "source": "~/Developer/grindion-supabase/volumes/api/kong-entrypoint.sh",
           "type": "bind",
           "volume": null,
           "writable": false
@@ -2985,15 +2985,15 @@
       "image_id": "sha256:52c405f6b0bdda9ea4487906e7241e0c944e9687f461e6601818b81bb07998ab",
       "mounts": [
         {
-          "destination": "/home/kong/kong-entrypoint.sh",
-          "source": "~/Developer/quillium-supabase/volumes/api/kong-entrypoint.sh",
+          "destination": "/home/kong/temp.yml",
+          "source": "~/Developer/quillium-supabase/volumes/api/kong.yml",
           "type": "bind",
           "volume": null,
           "writable": false
         },
         {
-          "destination": "/home/kong/temp.yml",
-          "source": "~/Developer/quillium-supabase/volumes/api/kong.yml",
+          "destination": "/home/kong/kong-entrypoint.sh",
+          "source": "~/Developer/quillium-supabase/volumes/api/kong-entrypoint.sh",
           "type": "bind",
           "volume": null,
           "writable": false
@@ -3221,18 +3221,18 @@
       "image_id": "sha256:8b553ac11096e387cec6f76dc4d651e568ffe4e314d51bf19542814bb344c4e2",
       "mounts": [
         {
-          "destination": "/app/snippets",
-          "source": "~/Developer/quillium-supabase/volumes/snippets",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
           "destination": "/app/edge-functions",
           "source": "~/Developer/quillium-supabase/volumes/functions",
           "type": "bind",
           "volume": null,
           "writable": false
+        },
+        {
+          "destination": "/app/snippets",
+          "source": "~/Developer/quillium-supabase/volumes/snippets",
+          "type": "bind",
+          "volume": null,
+          "writable": true
         }
       ],
       "name": "quillium-supabase-studio",
@@ -3599,13 +3599,6 @@
       "image_id": "sha256:a07d4cc8f4694dd7c46566ac184252e7c885afd5440b413ec8ee8818fc956427",
       "mounts": [
         {
-          "destination": "/var/cache/searxng",
-          "source": "/var/lib/docker/volumes/0b5d98bfc6657c5b3f353d9b03f2198b4d512aaadbf256b89cefff22de5fc72d/_data",
-          "type": "volume",
-          "volume": "0b5d98bfc6657c5b3f353d9b03f2198b4d512aaadbf256b89cefff22de5fc72d",
-          "writable": true
-        },
-        {
           "destination": "/etc/searxng",
           "source": "/var/lib/docker/volumes/d896d8b02bc201c6c10f6d683d8c059a57b872a3f90565496545084ba015a8cb/_data",
           "type": "volume",
@@ -3618,6 +3611,13 @@
           "type": "bind",
           "volume": null,
           "writable": false
+        },
+        {
+          "destination": "/var/cache/searxng",
+          "source": "/var/lib/docker/volumes/0b5d98bfc6657c5b3f353d9b03f2198b4d512aaadbf256b89cefff22de5fc72d/_data",
+          "type": "volume",
+          "volume": "0b5d98bfc6657c5b3f353d9b03f2198b4d512aaadbf256b89cefff22de5fc72d",
+          "writable": true
         }
       ],
       "name": "searxng-searxng-1",
@@ -3710,13 +3710,6 @@
       "image_id": "sha256:af083ef64d0408c8f098ee6f5c364a59b26f36fbc0f3a334a62c5c1d57362e9b",
       "mounts": [
         {
-          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
-          "source": "~/Developer/supabase/docker/volumes/db/_supabase.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
           "destination": "/docker-entrypoint-initdb.d/migrations/99-logs.sql",
           "source": "~/Developer/supabase/docker/volumes/db/logs.sql",
           "type": "bind",
@@ -3771,6 +3764,13 @@
           "type": "bind",
           "volume": null,
           "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
+          "source": "~/Developer/supabase/docker/volumes/db/_supabase.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
         }
       ],
       "name": "supabase-db",
@@ -3801,17 +3801,17 @@
       "image_id": "sha256:bb948acc46a786616198e024ebd328e9f35bcccebabc435083c703901c6c1405",
       "mounts": [
         {
-          "destination": "/root/.cache/deno",
-          "source": "/var/lib/docker/volumes/supabase_deno-cache/_data",
-          "type": "volume",
-          "volume": "supabase_deno-cache",
-          "writable": true
-        },
-        {
           "destination": "/home/deno/functions",
           "source": "~/Developer/supabase/docker/volumes/functions",
           "type": "bind",
           "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/root/.cache/deno",
+          "source": "/var/lib/docker/volumes/supabase_deno-cache/_data",
+          "type": "volume",
+          "volume": "supabase_deno-cache",
           "writable": true
         }
       ],
@@ -4122,18 +4122,18 @@
       "image_id": "sha256:dc9788e30b4d6110708b93fa78809141d0d085a516ac80a02bcdd0d9a039c91a",
       "mounts": [
         {
-          "destination": "/app/edge-functions",
-          "source": "~/Developer/supabase/docker/volumes/functions",
-          "type": "bind",
-          "volume": null,
-          "writable": false
-        },
-        {
           "destination": "/app/snippets",
           "source": "~/Developer/supabase/docker/volumes/snippets",
           "type": "bind",
           "volume": null,
           "writable": true
+        },
+        {
+          "destination": "/app/edge-functions",
+          "source": "~/Developer/supabase/docker/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": false
         }
       ],
       "name": "supabase-studio",
@@ -4531,6 +4531,20 @@
       "image_id": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
       "mounts": [
         {
+          "destination": "/etc/postgresql-custom",
+          "source": "/var/lib/docker/volumes/wuzursched-supabase_db-config/_data",
+          "type": "volume",
+          "volume": "wuzursched-supabase_db-config",
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
           "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
           "source": "~/Developer/wuzursched-supabase/docker/volumes/db/_supabase.sql",
           "type": "bind",
@@ -4575,20 +4589,6 @@
         {
           "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
           "source": "~/Developer/wuzursched-supabase/docker/volumes/db/roles.sql",
-          "type": "bind",
-          "volume": null,
-          "writable": true
-        },
-        {
-          "destination": "/etc/postgresql-custom",
-          "source": "/var/lib/docker/volumes/wuzursched-supabase_db-config/_data",
-          "type": "volume",
-          "volume": "wuzursched-supabase_db-config",
-          "writable": true
-        },
-        {
-          "destination": "/var/lib/postgresql/data",
-          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/data",
           "type": "bind",
           "volume": null,
           "writable": true
@@ -4981,7 +4981,7 @@
         "TRUSTED_PROXY_IPS"
       ],
       "image": "youremagic:latest",
-      "image_id": "sha256:c74978b7069c689d92255cb2795ce052fd14f59689179cdd2a42ca32a6f2fc58",
+      "image_id": "sha256:36f366ab9c5256e95a4eead394283fa4107243d2c80fadc6ebae1c316df46339",
       "mounts": [
         {
           "destination": "/app/data",
@@ -5001,7 +5001,7 @@
         ]
       },
       "repo_digests": [
-        "youremagic@sha256:c74978b7069c689d92255cb2795ce052fd14f59689179cdd2a42ca32a6f2fc58"
+        "youremagic@sha256:36f366ab9c5256e95a4eead394283fa4107243d2c80fadc6ebae1c316df46339"
       ],
       "restart": "unless-stopped",
       "state": "running"
@@ -5569,7 +5569,7 @@
       "script_paths": []
     }
   ],
-  "observed_at": "2026-11-02T03:11:13.502905+00:00",
+  "observed_at": "2026-11-02T05:08:54.123714+00:00",
   "schema": 1,
   "sources": [
     {
@@ -5603,9 +5603,9 @@
       "repository": "https://github.com/mohammadtavakoli78/BEAM"
     },
     {
-      "commit": "17996eb51619677c08f0e5e4b2d0137243da30e0",
+      "commit": "1192392e4abf60282b5fc1d5a8e0f54bb8b6951b",
       "directory": "~/Developer/big-mac",
-      "dirty": true,
+      "dirty": false,
       "repository": "https://github.com/ThatXliner/big-mac"
     },
     {
@@ -5705,7 +5705,7 @@
       "repository": "https://github.com/supabase/supabase"
     },
     {
-      "commit": "34bdb2db3b7ea99f59b8a696687335220dded10d",
+      "commit": "cc2587309f8473b0f873c712cad8ba281dcf1d53",
       "directory": "~/Developer/yourEmagic",
       "dirty": false,
       "repository": "https://github.com/ThatXliner/yourEmagic"
