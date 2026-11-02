@@ -1,0 +1,24 @@
+name: unblock
+services:
+  ladder:
+    image: ${LADDER_IMAGE:-ghcr.io/everywall/ladder@sha256:cf30c32ac046a5554a4e829f46546d68ed6056986ba5ba83c65a5a705828d5fe}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${UNBLOCK_PORT:-8093}:8080"
+    environment:
+      PORT: "8080"
+      USERPASS: ${UNBLOCK_USERPASS:?Run scripts/setup-unblock.py first}
+      RULESET: ${LADDER_RULESET:-https://raw.githubusercontent.com/everywall/ladder-rules/main/ruleset.yaml}
+      LOG_URLS: "false"
+      NOLOGS: "true"
+      EXPOSE_RULESET: "false"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"

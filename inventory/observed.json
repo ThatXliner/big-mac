@@ -1,0 +1,5678 @@
+{
+  "compose_projects": {
+    "attention": {
+      "directory": "~/Developer/attention",
+      "files": [
+        "~/Developer/attention/docker-compose.yml"
+      ]
+    },
+    "billion-supabase-trial": {
+      "directory": "~/.config/billion/supabase-trial",
+      "files": [
+        "~/.config/billion/supabase-trial/docker-compose.yml",
+        "~/.config/billion/supabase-trial/compose.override.yaml"
+      ]
+    },
+    "blog-likes": {
+      "directory": "~/Developer/blog-likes",
+      "files": [
+        "~/Developer/blog-likes/compose.yml"
+      ]
+    },
+    "church-retreat": {
+      "directory": "~/Developer/church-retreat-supabase/docker",
+      "files": [
+        "~/Developer/church-retreat-supabase/docker/docker-compose.yml"
+      ]
+    },
+    "claudeslop": {
+      "directory": "~/Developer/claudeslop",
+      "files": [
+        "~/Developer/claudeslop/compose.yaml"
+      ]
+    },
+    "grindion": {
+      "directory": "~/Developer/Grindion",
+      "files": [
+        "~/Developer/Grindion/compose.production.yml"
+      ]
+    },
+    "grindion-supabase": {
+      "directory": "~/Developer/grindion-supabase",
+      "files": [
+        "~/Developer/grindion-supabase/docker-compose.yml"
+      ]
+    },
+    "invidious": {
+      "directory": "~/Developer/invidious",
+      "files": [
+        "~/Developer/invidious/docker-compose.yml"
+      ]
+    },
+    "picpeak": {
+      "directory": "~/Developer/picpeak",
+      "files": [
+        "~/Developer/picpeak/docker-compose.yml"
+      ]
+    },
+    "qbot": {
+      "directory": "~/Developer/qbot",
+      "files": [
+        "~/Developer/qbot/docker-compose.yml",
+        "~/.local/state/codex-security-20261021/qbot/security-image-override.json"
+      ]
+    },
+    "quillium-supabase": {
+      "directory": "~/Developer/quillium-supabase",
+      "files": [
+        "~/Developer/quillium-supabase/docker-compose.yml"
+      ]
+    },
+    "rustdesk-server": {
+      "directory": "~/rustdesk-server",
+      "files": [
+        "~/rustdesk-server/docker-compose.yml"
+      ]
+    },
+    "searxng": {
+      "directory": "~/.config/billion/searxng",
+      "files": [
+        "~/.config/billion/searxng/compose.yaml"
+      ]
+    },
+    "supabase": {
+      "directory": "~/Developer/supabase/docker",
+      "files": [
+        "~/Developer/supabase/docker/docker-compose.yml"
+      ]
+    },
+    "terminus": {
+      "directory": "~/Developer/terminus",
+      "files": [
+        "~/Developer/terminus/compose.yml",
+        "~/Developer/terminus/compose.override.yml"
+      ]
+    },
+    "umami-selfhost": {
+      "directory": "~/Developer/umami-selfhost",
+      "files": [
+        "~/Developer/umami-selfhost/compose.yml"
+      ]
+    },
+    "unblock": {
+      "directory": "~/Developer/big-mac/services/unblock",
+      "files": [
+        "~/Developer/big-mac/services/unblock/compose.yaml"
+      ]
+    },
+    "wuzursched-supabase": {
+      "directory": "~/Developer/wuzursched-supabase/docker",
+      "files": [
+        "~/Developer/wuzursched-supabase/docker/docker-compose.yml"
+      ]
+    },
+    "youremagic": {
+      "directory": "~/Developer/yourEmagic",
+      "files": [
+        "~/Developer/yourEmagic/compose.production.yml"
+      ]
+    }
+  },
+  "containers": [
+    {
+      "compose_project": "attention",
+      "compose_service": "auth",
+      "environment_keys": [
+        "API_EXTERNAL_URL",
+        "GOTRUE_API_HOST",
+        "GOTRUE_API_PORT",
+        "GOTRUE_DB_DATABASE_URL",
+        "GOTRUE_DB_DRIVER",
+        "GOTRUE_DB_MIGRATIONS_PATH",
+        "GOTRUE_DISABLE_SIGNUP",
+        "GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED",
+        "GOTRUE_EXTERNAL_EMAIL_ENABLED",
+        "GOTRUE_JWT_ADMIN_ROLES",
+        "GOTRUE_JWT_AUD",
+        "GOTRUE_JWT_DEFAULT_GROUP_NAME",
+        "GOTRUE_JWT_EXP",
+        "GOTRUE_JWT_SECRET",
+        "GOTRUE_MAILER_AUTOCONFIRM",
+        "GOTRUE_MAILER_URLPATHS_CONFIRMATION",
+        "GOTRUE_MAILER_URLPATHS_RECOVERY",
+        "GOTRUE_RATE_LIMIT_EMAIL_SENT",
+        "GOTRUE_SITE_URL",
+        "GOTRUE_SMTP_ADMIN_EMAIL",
+        "GOTRUE_SMTP_HOST",
+        "GOTRUE_SMTP_PASS",
+        "GOTRUE_SMTP_PORT",
+        "GOTRUE_SMTP_SENDER_NAME",
+        "GOTRUE_SMTP_USER",
+        "GOTRUE_URI_ALLOW_LIST",
+        "PATH"
+      ],
+      "image": "local-security/attention-auth-1:emudhra-c9afcb99a051",
+      "image_id": "sha256:54fed509b0c50eed31e3590db92ca76e57b00ecdaa2400268f04b98b245f350a",
+      "mounts": [],
+      "name": "attention-auth-1",
+      "ports": {},
+      "repo_digests": [
+        "local-security/attention-auth-1@sha256:54fed509b0c50eed31e3590db92ca76e57b00ecdaa2400268f04b98b245f350a"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "attention",
+      "compose_service": "db",
+      "environment_keys": [
+        "GRN_PLUGINS_DIR",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "LOCALE_ARCHIVE",
+        "PATH",
+        "PGDATA",
+        "PGDATABASE",
+        "PGPASSWORD",
+        "PGPORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_INITDB_ARGS",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER"
+      ],
+      "image": "supabase/postgres:17.6.1.136",
+      "image_id": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+      "mounts": [
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
+          "source": "~/Developer/attention/docker/roles.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/etc/postgresql-custom",
+          "source": "/var/lib/docker/volumes/attention_attention-db-config/_data",
+          "type": "volume",
+          "volume": "attention_attention-db-config",
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "/var/lib/docker/volumes/attention_attention-db/_data",
+          "type": "volume",
+          "volume": "attention_attention-db",
+          "writable": true
+        }
+      ],
+      "name": "attention-db-1",
+      "ports": {},
+      "repo_digests": [
+        "supabase/postgres@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "attention",
+      "compose_service": "gateway",
+      "environment_keys": [
+        "ANON_KEY",
+        "DYNPKG_RELEASE",
+        "NGINX_VERSION",
+        "NJS_RELEASE",
+        "NJS_VERSION",
+        "PATH",
+        "PKG_RELEASE",
+        "SERVICE_ROLE_KEY"
+      ],
+      "image": "local-security/attention-gateway-1:emudhra-d392d5caa817",
+      "image_id": "sha256:328bd88117f430216de2148903b1d2e3b5527de65941928ef95ed11d0f137d38",
+      "mounts": [
+        {
+          "destination": "/etc/nginx/templates/default.conf.template",
+          "source": "~/Developer/attention/docker/gateway.conf.template",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "attention-gateway-1",
+      "ports": {},
+      "repo_digests": [
+        "local-security/attention-gateway-1@sha256:328bd88117f430216de2148903b1d2e3b5527de65941928ef95ed11d0f137d38"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "attention",
+      "compose_service": "rest",
+      "environment_keys": [
+        "PATH",
+        "PGRST_ADMIN_SERVER_HOST",
+        "PGRST_ADMIN_SERVER_PORT",
+        "PGRST_DB_ANON_ROLE",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PGRST_DB_URI",
+        "PGRST_JWT_SECRET"
+      ],
+      "image": "local-security/attention-rest-1:emudhra-07ff10206e5a",
+      "image_id": "sha256:0c32b72c94988a45278ba7363367e3ca4fcf04eff40a6430ba11c20eb87b459a",
+      "mounts": [],
+      "name": "attention-rest-1",
+      "ports": {},
+      "repo_digests": [
+        "local-security/attention-rest-1@sha256:0c32b72c94988a45278ba7363367e3ca4fcf04eff40a6430ba11c20eb87b459a"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "attention",
+      "compose_service": "web",
+      "environment_keys": [
+        "HOSTNAME",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_ENV",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "PORT",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/attention-web-1:emudhra-d1423090c8d8",
+      "image_id": "sha256:d301c1965b97f7b425ae9a11224d83e881b73269d86b1860fc479f12133042d6",
+      "mounts": [],
+      "name": "attention-web-1",
+      "ports": {
+        "3000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "3016"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/attention-web-1@sha256:d301c1965b97f7b425ae9a11224d83e881b73269d86b1860fc479f12133042d6"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": null,
+      "compose_service": null,
+      "environment_keys": [
+        "BETTER_AUTH_SECRET",
+        "BFL_API_KEY",
+        "CONGRESS_API_KEY",
+        "COURTLISTENER_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "FINALIZER_SOURCE_B64",
+        "LOCAL_FLUX_BASE_URL",
+        "LOCAL_FLUX_MODEL",
+        "LOCAL_LLM_BASE_URL",
+        "LOCAL_LLM_MODEL",
+        "NODE_VERSION",
+        "OPEN_STATES_API_KEY",
+        "PATH",
+        "POSTGRES_URL",
+        "RESEND_API_KEY",
+        "RESEND_LAUNCH_UPDATES_TOPIC_ID",
+        "RESEND_WAITLIST_SEGMENT_ID",
+        "YARN_VERSION"
+      ],
+      "image": "billion-scraper:fb1671d-seed",
+      "image_id": "sha256:68d312efdfc250712a710ca4d2b0f3687787ab5ab0676ece228c3a392d03611b",
+      "mounts": [],
+      "name": "billion-seed-finalizer",
+      "ports": {},
+      "repo_digests": [
+        "billion-scraper@sha256:68d312efdfc250712a710ca4d2b0f3687787ab5ab0676ece228c3a392d03611b"
+      ],
+      "restart": "no",
+      "state": "exited"
+    },
+    {
+      "compose_project": null,
+      "compose_service": null,
+      "environment_keys": [
+        "BETTER_AUTH_SECRET",
+        "BFL_API_KEY",
+        "BFL_API_KEY",
+        "CONGRESS_API_KEY",
+        "COURTLISTENER_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "LOCAL_FLUX_BASE_URL",
+        "LOCAL_FLUX_MODEL",
+        "LOCAL_LLM_BASE_URL",
+        "LOCAL_LLM_MODEL",
+        "NODE_VERSION",
+        "OPEN_STATES_API_KEY",
+        "OPEN_STATES_STATES",
+        "PATH",
+        "POSTGRES_URL",
+        "RESEND_API_KEY",
+        "RESEND_LAUNCH_UPDATES_TOPIC_ID",
+        "RESEND_WAITLIST_SEGMENT_ID",
+        "SCRAPER_MAX_NEW_ITEMS_PER_RUN",
+        "SCRAPER_SKIP_DUAL_LENS",
+        "YARN_VERSION"
+      ],
+      "image": "ghcr.io/billion-app/billion-scraper:d2d3523ec41ef85bd3e9e37d111d3e58c32958f5",
+      "image_id": "sha256:90461f5807a66101a1275b563c5d52dd8bdbe4a4a9c5414778d3d5597f36847c",
+      "mounts": [
+        {
+          "destination": "/var/lib/billion",
+          "source": "~/.local/state/billion",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-seed-mo",
+      "ports": {},
+      "repo_digests": [
+        "ghcr.io/billion-app/billion-scraper@sha256:90461f5807a66101a1275b563c5d52dd8bdbe4a4a9c5414778d3d5597f36847c"
+      ],
+      "restart": "no",
+      "state": "exited"
+    },
+    {
+      "compose_project": null,
+      "compose_service": null,
+      "environment_keys": [
+        "BETTER_AUTH_SECRET",
+        "BFL_API_KEY",
+        "BFL_API_KEY",
+        "CONGRESS_API_KEY",
+        "COURTLISTENER_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "LOCAL_FLUX_BASE_URL",
+        "LOCAL_FLUX_MODEL",
+        "LOCAL_LLM_BASE_URL",
+        "LOCAL_LLM_MODEL",
+        "NODE_VERSION",
+        "OPEN_STATES_API_KEY",
+        "OPEN_STATES_STATES",
+        "PATH",
+        "POSTGRES_URL",
+        "RESEND_API_KEY",
+        "RESEND_LAUNCH_UPDATES_TOPIC_ID",
+        "RESEND_WAITLIST_SEGMENT_ID",
+        "SCRAPER_MAX_NEW_ITEMS_PER_RUN",
+        "SCRAPER_SKIP_DUAL_LENS",
+        "YARN_VERSION"
+      ],
+      "image": "ghcr.io/billion-app/billion-scraper:d2d3523ec41ef85bd3e9e37d111d3e58c32958f5",
+      "image_id": "sha256:90461f5807a66101a1275b563c5d52dd8bdbe4a4a9c5414778d3d5597f36847c",
+      "mounts": [
+        {
+          "destination": "/var/lib/billion",
+          "source": "~/.local/state/billion",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-seed-nc",
+      "ports": {},
+      "repo_digests": [
+        "ghcr.io/billion-app/billion-scraper@sha256:90461f5807a66101a1275b563c5d52dd8bdbe4a4a9c5414778d3d5597f36847c"
+      ],
+      "restart": "no",
+      "state": "exited"
+    },
+    {
+      "compose_project": null,
+      "compose_service": null,
+      "environment_keys": [
+        "BETTER_AUTH_SECRET",
+        "BFL_API_KEY",
+        "BFL_API_KEY",
+        "CONGRESS_API_KEY",
+        "COURTLISTENER_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "LOCAL_FLUX_BASE_URL",
+        "LOCAL_FLUX_MODEL",
+        "LOCAL_LLM_BASE_URL",
+        "LOCAL_LLM_MODEL",
+        "NODE_VERSION",
+        "OPEN_STATES_API_KEY",
+        "OPEN_STATES_STATES",
+        "PATH",
+        "POSTGRES_URL",
+        "RESEND_API_KEY",
+        "RESEND_LAUNCH_UPDATES_TOPIC_ID",
+        "RESEND_WAITLIST_SEGMENT_ID",
+        "SCRAPER_MAX_NEW_ITEMS_PER_RUN",
+        "SCRAPER_SKIP_DUAL_LENS",
+        "YARN_VERSION"
+      ],
+      "image": "ghcr.io/billion-app/billion-scraper:d2d3523ec41ef85bd3e9e37d111d3e58c32958f5",
+      "image_id": "sha256:90461f5807a66101a1275b563c5d52dd8bdbe4a4a9c5414778d3d5597f36847c",
+      "mounts": [
+        {
+          "destination": "/var/lib/billion",
+          "source": "~/.local/state/billion",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-seed-tx",
+      "ports": {},
+      "repo_digests": [
+        "ghcr.io/billion-app/billion-scraper@sha256:90461f5807a66101a1275b563c5d52dd8bdbe4a4a9c5414778d3d5597f36847c"
+      ],
+      "restart": "no",
+      "state": "exited"
+    },
+    {
+      "compose_project": null,
+      "compose_service": null,
+      "environment_keys": [
+        "BETTER_AUTH_SECRET",
+        "BFL_API_KEY",
+        "CONGRESS_API_KEY",
+        "COURTLISTENER_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "LOCAL_FLUX_BASE_URL",
+        "LOCAL_FLUX_MODEL",
+        "LOCAL_LLM_BASE_URL",
+        "LOCAL_LLM_MODEL",
+        "NODE_VERSION",
+        "OPEN_STATES_API_KEY",
+        "PATH",
+        "POSTGRES_URL",
+        "RESEND_API_KEY",
+        "RESEND_LAUNCH_UPDATES_TOPIC_ID",
+        "RESEND_WAITLIST_SEGMENT_ID",
+        "SCRAPER_FALLBACK_BASE_URL",
+        "SCRAPER_FALLBACK_MODEL",
+        "SCRAPER_FALLBACK_PRIORITY",
+        "SCRAPER_IMAGE_MODEL",
+        "SCRAPER_IMAGE_PROVIDER",
+        "SCRAPER_SEARCH_PROVIDER",
+        "SCRAPER_SEARXNG_BASE_URL",
+        "SUPABASE_SECRET_KEY",
+        "TAVILY_API_KEY",
+        "YARN_VERSION"
+      ],
+      "image": "ghcr.io/billion-app/billion-scraper:e8cb6a3793f5699995cdde3ebfe418a593c66664",
+      "image_id": "sha256:ce1d67a53db5dd0ba40c24f7229c178c6a923334ad2f4f94f27e1770d1ec74bf",
+      "mounts": [
+        {
+          "destination": "/var/lib/billion",
+          "source": "~/.local/state/billion",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-supervisor",
+      "ports": {},
+      "repo_digests": [
+        "ghcr.io/billion-app/billion-scraper@sha256:ce1d67a53db5dd0ba40c24f7229c178c6a923334ad2f4f94f27e1770d1ec74bf"
+      ],
+      "restart": "no",
+      "state": "running"
+    },
+    {
+      "compose_project": null,
+      "compose_service": null,
+      "environment_keys": [
+        "BETTER_AUTH_SECRET",
+        "BFL_API_KEY",
+        "CONGRESS_API_KEY",
+        "COURTLISTENER_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "LOCAL_FLUX_BASE_URL",
+        "LOCAL_FLUX_MODEL",
+        "LOCAL_LLM_BASE_URL",
+        "LOCAL_LLM_MODEL",
+        "NODE_VERSION",
+        "OPEN_STATES_API_KEY",
+        "PATH",
+        "POSTGRES_URL",
+        "RESEND_API_KEY",
+        "RESEND_LAUNCH_UPDATES_TOPIC_ID",
+        "RESEND_WAITLIST_SEGMENT_ID",
+        "SCRAPER_FALLBACK_BASE_URL",
+        "SCRAPER_FALLBACK_MODEL",
+        "SCRAPER_FALLBACK_PRIORITY",
+        "SCRAPER_IMAGE_MODEL",
+        "SCRAPER_IMAGE_PROVIDER",
+        "SCRAPER_SEARCH_PROVIDER",
+        "SCRAPER_SEARXNG_BASE_URL",
+        "SUPABASE_SECRET_KEY",
+        "TAVILY_API_KEY",
+        "YARN_VERSION"
+      ],
+      "image": "ghcr.io/billion-app/billion-scraper:e8cb6a3793f5699995cdde3ebfe418a593c66664",
+      "image_id": "sha256:ce1d67a53db5dd0ba40c24f7229c178c6a923334ad2f4f94f27e1770d1ec74bf",
+      "mounts": [
+        {
+          "destination": "/var/lib/billion",
+          "source": "~/.local/state/billion",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-translations",
+      "ports": {},
+      "repo_digests": [
+        "ghcr.io/billion-app/billion-scraper@sha256:ce1d67a53db5dd0ba40c24f7229c178c6a923334ad2f4f94f27e1770d1ec74bf"
+      ],
+      "restart": "no",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "auth",
+      "environment_keys": [
+        "API_EXTERNAL_URL",
+        "GOTRUE_API_HOST",
+        "GOTRUE_API_PORT",
+        "GOTRUE_DB_DATABASE_URL",
+        "GOTRUE_DB_DRIVER",
+        "GOTRUE_DB_MIGRATIONS_PATH",
+        "GOTRUE_DISABLE_SIGNUP",
+        "GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED",
+        "GOTRUE_EXTERNAL_EMAIL_ENABLED",
+        "GOTRUE_EXTERNAL_PHONE_ENABLED",
+        "GOTRUE_JWT_ADMIN_ROLES",
+        "GOTRUE_JWT_AUD",
+        "GOTRUE_JWT_DEFAULT_GROUP_NAME",
+        "GOTRUE_JWT_EXP",
+        "GOTRUE_JWT_ISSUER",
+        "GOTRUE_JWT_KEYS",
+        "GOTRUE_JWT_SECRET",
+        "GOTRUE_MAILER_AUTOCONFIRM",
+        "GOTRUE_MAILER_URLPATHS_CONFIRMATION",
+        "GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE",
+        "GOTRUE_MAILER_URLPATHS_INVITE",
+        "GOTRUE_MAILER_URLPATHS_RECOVERY",
+        "GOTRUE_SITE_URL",
+        "GOTRUE_SMS_AUTOCONFIRM",
+        "GOTRUE_SMTP_ADMIN_EMAIL",
+        "GOTRUE_SMTP_HOST",
+        "GOTRUE_SMTP_PASS",
+        "GOTRUE_SMTP_PORT",
+        "GOTRUE_SMTP_SENDER_NAME",
+        "GOTRUE_SMTP_USER",
+        "GOTRUE_URI_ALLOW_LIST",
+        "PATH"
+      ],
+      "image": "supabase/gotrue:v2.197.0",
+      "image_id": "sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b",
+      "mounts": [],
+      "name": "billion-trial-auth",
+      "ports": {},
+      "repo_digests": [
+        "supabase/gotrue@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "db",
+      "environment_keys": [
+        "GRN_PLUGINS_DIR",
+        "JWT_EXP",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "LOCALE_ARCHIVE",
+        "PATH",
+        "PGDATA",
+        "PGDATABASE",
+        "PGPASSWORD",
+        "PGPORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_INITDB_ARGS",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER"
+      ],
+      "image": "supabase/postgres:17.6.1.136",
+      "image_id": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+      "mounts": [
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/_supabase.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-logs.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/logs.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-pooler.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/pooler.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/etc/postgresql-custom",
+          "source": "/var/lib/docker/volumes/billion-supabase-trial_db-config/_data",
+          "type": "volume",
+          "volume": "billion-supabase-trial_db-config",
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "~/.config/billion/supabase-trial/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/webhooks.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/jwt.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/roles.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-realtime.sql",
+          "source": "~/.config/billion/supabase-trial/volumes/db/realtime.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-trial-db",
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "5440"
+          }
+        ]
+      },
+      "repo_digests": [
+        "supabase/postgres@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "functions",
+      "environment_keys": [
+        "JWT_SECRET",
+        "PATH",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_DB_URL",
+        "SUPABASE_JWKS",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEYS",
+        "SUPABASE_SECRET_KEYS",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "SUPABASE_URL",
+        "VERIFY_JWT"
+      ],
+      "image": "supabase/edge-runtime:v1.77.4",
+      "image_id": "sha256:ad45164b7548bf5820ed7be714789c17ac2865edce79a09cfb4c3756c3d365a8",
+      "mounts": [
+        {
+          "destination": "/home/deno/functions",
+          "source": "~/.config/billion/supabase-trial/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/root/.cache/deno",
+          "source": "/var/lib/docker/volumes/billion-supabase-trial_deno-cache/_data",
+          "type": "volume",
+          "volume": "billion-supabase-trial_deno-cache",
+          "writable": true
+        }
+      ],
+      "name": "billion-trial-functions",
+      "ports": {},
+      "repo_digests": [
+        "supabase/edge-runtime@sha256:ad45164b7548bf5820ed7be714789c17ac2865edce79a09cfb4c3756c3d365a8"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "api-gw",
+      "environment_keys": [
+        "ANON_KEY",
+        "ANON_KEY_ASYMMETRIC",
+        "DASHBOARD_PASSWORD",
+        "DASHBOARD_USERNAME",
+        "DEBIAN_FRONTEND",
+        "PATH",
+        "SERVICE_ROLE_KEY",
+        "SERVICE_ROLE_KEY_ASYMMETRIC",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY"
+      ],
+      "image": "envoyproxy/envoy:v1.39.1",
+      "image_id": "sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4",
+      "mounts": [
+        {
+          "destination": "/etc/envoy/cds.yaml",
+          "source": "~/.config/billion/supabase-trial/volumes/api/envoy/cds.yaml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/etc/envoy/envoy.yaml",
+          "source": "~/.config/billion/supabase-trial/volumes/api/envoy/envoy.yaml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/etc/envoy/lds.template.yaml",
+          "source": "~/.config/billion/supabase-trial/volumes/api/envoy/lds.template.yaml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/docker-entrypoint.sh",
+          "source": "~/.config/billion/supabase-trial/volumes/api/envoy/docker-entrypoint.sh",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "billion-trial-gateway",
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8006"
+          }
+        ]
+      },
+      "repo_digests": [
+        "envoyproxy/envoy@sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "imgproxy",
+      "environment_keys": [
+        "AWS_LWA_ASYNC_INIT",
+        "AWS_LWA_INVOKE_MODE",
+        "AWS_LWA_READINESS_CHECK_PATH",
+        "FONTCONFIG_PATH",
+        "IMGPROXY_AUTO_WEBP",
+        "IMGPROXY_BIND",
+        "IMGPROXY_LOCAL_FILESYSTEM_ROOT",
+        "IMGPROXY_MALLOC",
+        "IMGPROXY_MAX_SRC_RESOLUTION",
+        "IMGPROXY_USE_ETAG",
+        "MALLOC_ARENA_MAX",
+        "PATH",
+        "VIPS_VECTOR",
+        "VIPS_WARNING"
+      ],
+      "image": "darthsim/imgproxy:v3.31.4",
+      "image_id": "sha256:73c5dda13199745b0d2d00e4149d4a589c5b2e205dbf335ca05eca8276b54712",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/.config/billion/supabase-trial/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-trial-imgproxy",
+      "ports": {},
+      "repo_digests": [
+        "darthsim/imgproxy@sha256:73c5dda13199745b0d2d00e4149d4a589c5b2e205dbf335ca05eca8276b54712"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "meta",
+      "environment_keys": [
+        "CRYPTO_KEY",
+        "NODE_VERSION",
+        "PATH",
+        "PG_META_DB_HOST",
+        "PG_META_DB_NAME",
+        "PG_META_DB_PASSWORD",
+        "PG_META_DB_PORT",
+        "PG_META_DB_USER",
+        "PG_META_PORT",
+        "YARN_VERSION"
+      ],
+      "image": "supabase/postgres-meta:v0.100.0",
+      "image_id": "sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd",
+      "mounts": [],
+      "name": "billion-trial-meta",
+      "ports": {},
+      "repo_digests": [
+        "supabase/postgres-meta@sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "supavisor",
+      "environment_keys": [
+        "API_JWT_SECRET",
+        "CLUSTER_POSTGRES",
+        "DATABASE_URL",
+        "DB_POOL_SIZE",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "POOLER_DEFAULT_POOL_SIZE",
+        "POOLER_MAX_CLIENT_CONN",
+        "POOLER_POOL_MODE",
+        "POOLER_TENANT_ID",
+        "PORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "REGION",
+        "RLIMIT_NOFILE",
+        "SECRET_KEY_BASE",
+        "VAULT_ENC_KEY"
+      ],
+      "image": "supabase/supavisor:2.9.13",
+      "image_id": "sha256:07f1a6098ffc04b80263bca4eb5c3e7bd2e03dfd1fc465aa108d7329000a1a4e",
+      "mounts": [
+        {
+          "destination": "/etc/pooler/pooler.exs",
+          "source": "~/.config/billion/supabase-trial/volumes/pooler/pooler.exs",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "billion-trial-pooler",
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "5441"
+          }
+        ],
+        "6543/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "6548"
+          }
+        ]
+      },
+      "repo_digests": [
+        "supabase/supavisor@sha256:07f1a6098ffc04b80263bca4eb5c3e7bd2e03dfd1fc465aa108d7329000a1a4e"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "rest",
+      "environment_keys": [
+        "PATH",
+        "PGRST_ADMIN_SERVER_HOST",
+        "PGRST_ADMIN_SERVER_PORT",
+        "PGRST_APP_SETTINGS_JWT_EXP",
+        "PGRST_DB_ANON_ROLE",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PGRST_DB_URI",
+        "PGRST_DB_USE_LEGACY_GUCS",
+        "PGRST_JWT_SECRET"
+      ],
+      "image": "postgrest/postgrest:v14.18",
+      "image_id": "sha256:c7cd7e265a85b05248abf53f4473fcec7e327c282d0bd0cf60f1551996d09fcf",
+      "mounts": [],
+      "name": "billion-trial-rest",
+      "ports": {},
+      "repo_digests": [
+        "postgrest/postgrest@sha256:c7cd7e265a85b05248abf53f4473fcec7e327c282d0bd0cf60f1551996d09fcf"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "storage",
+      "environment_keys": [
+        "ANON_KEY",
+        "AUTH_JWT_SECRET",
+        "DATABASE_URL",
+        "ENABLE_IMAGE_TRANSFORMATION",
+        "FILE_SIZE_LIMIT",
+        "FILE_STORAGE_BACKEND_PATH",
+        "GLOBAL_S3_BUCKET",
+        "IMGPROXY_URL",
+        "JWT_JWKS",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "POSTGREST_URL",
+        "REGION",
+        "REQUEST_ALLOW_X_FORWARDED_PATH",
+        "S3_PROTOCOL_ACCESS_KEY_ID",
+        "S3_PROTOCOL_ACCESS_KEY_SECRET",
+        "SERVICE_KEY",
+        "STORAGE_BACKEND",
+        "STORAGE_PUBLIC_URL",
+        "TENANT_ID",
+        "VERSION",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/billion-trial-storage:emudhra-462814876ac8",
+      "image_id": "sha256:06001ac169485af660bb210242877479171540f96b85809151d15cce4515d556",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/.config/billion/supabase-trial/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-trial-storage",
+      "ports": {},
+      "repo_digests": [
+        "local-security/billion-trial-storage@sha256:06001ac169485af660bb210242877479171540f96b85809151d15cce4515d556"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "studio",
+      "environment_keys": [
+        "AUTH_JWT_SECRET",
+        "DEFAULT_ORGANIZATION_NAME",
+        "DEFAULT_PROJECT_NAME",
+        "EDGE_FUNCTIONS_MANAGEMENT_FOLDER",
+        "ENABLED_FEATURES_LOGS_ALL",
+        "HOSTNAME",
+        "NODE_VERSION",
+        "OPENAI_API_KEY",
+        "PATH",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PG_META_CRYPTO_KEY",
+        "PNPM_HOME",
+        "PORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER_READ_WRITE",
+        "SNIPPETS_MANAGEMENT_FOLDER",
+        "STUDIO_PG_META_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY",
+        "SUPABASE_URL",
+        "YARN_VERSION"
+      ],
+      "image": "supabase/studio:2026.10.12-sha-3699278",
+      "image_id": "sha256:948770ec467f00e6ae34c35018ef7cb23d7b30eb806b42c2cc0d7bcfdcf8a7a8",
+      "mounts": [
+        {
+          "destination": "/app/edge-functions",
+          "source": "~/.config/billion/supabase-trial/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/app/snippets",
+          "source": "~/.config/billion/supabase-trial/volumes/snippets",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "billion-trial-studio",
+      "ports": {},
+      "repo_digests": [
+        "supabase/studio@sha256:948770ec467f00e6ae34c35018ef7cb23d7b30eb806b42c2cc0d7bcfdcf8a7a8"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "blog-likes",
+      "compose_service": "likes",
+      "environment_keys": [
+        "DATABASE_PATH",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "PORT",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/blog-likes-likes-1:emudhra-d74c9b710f5e",
+      "image_id": "sha256:79e14a5ea61a3a13d4335a7abd04242893f90e83785c6d6225b9c9e5ceb65c4a",
+      "mounts": [
+        {
+          "destination": "/app/server.mjs",
+          "source": "~/Developer/blog-likes/server.mjs",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/data",
+          "source": "~/Developer/blog-likes/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "blog-likes-likes-1",
+      "ports": {
+        "3015/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "3015"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/blog-likes-likes-1@sha256:79e14a5ea61a3a13d4335a7abd04242893f90e83785c6d6225b9c9e5ceb65c4a"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "auth",
+      "environment_keys": [
+        "API_EXTERNAL_URL",
+        "GOTRUE_API_HOST",
+        "GOTRUE_API_PORT",
+        "GOTRUE_DB_DATABASE_URL",
+        "GOTRUE_DB_DRIVER",
+        "GOTRUE_DB_MIGRATIONS_PATH",
+        "GOTRUE_DISABLE_SIGNUP",
+        "GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED",
+        "GOTRUE_EXTERNAL_EMAIL_ENABLED",
+        "GOTRUE_EXTERNAL_PHONE_ENABLED",
+        "GOTRUE_JWT_ADMIN_ROLES",
+        "GOTRUE_JWT_AUD",
+        "GOTRUE_JWT_DEFAULT_GROUP_NAME",
+        "GOTRUE_JWT_EXP",
+        "GOTRUE_JWT_ISSUER",
+        "GOTRUE_JWT_KEYS",
+        "GOTRUE_JWT_SECRET",
+        "GOTRUE_MAILER_AUTOCONFIRM",
+        "GOTRUE_MAILER_URLPATHS_CONFIRMATION",
+        "GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE",
+        "GOTRUE_MAILER_URLPATHS_INVITE",
+        "GOTRUE_MAILER_URLPATHS_RECOVERY",
+        "GOTRUE_SITE_URL",
+        "GOTRUE_SMS_AUTOCONFIRM",
+        "GOTRUE_SMTP_ADMIN_EMAIL",
+        "GOTRUE_SMTP_HOST",
+        "GOTRUE_SMTP_PASS",
+        "GOTRUE_SMTP_PORT",
+        "GOTRUE_SMTP_SENDER_NAME",
+        "GOTRUE_SMTP_USER",
+        "GOTRUE_URI_ALLOW_LIST",
+        "PATH"
+      ],
+      "image": "local-security/church-retreat-auth:emudhra-91a919c20ea3",
+      "image_id": "sha256:8a2bf71af372c86f590ba69dde8c2eafbd76e7895086b6211ba6bb60f8cc5c4f",
+      "mounts": [],
+      "name": "church-retreat-auth",
+      "ports": {},
+      "repo_digests": [
+        "local-security/church-retreat-auth@sha256:8a2bf71af372c86f590ba69dde8c2eafbd76e7895086b6211ba6bb60f8cc5c4f"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "db",
+      "environment_keys": [
+        "JWT_EXP",
+        "JWT_SECRET",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "LC_COLLATE",
+        "LC_CTYPE",
+        "LOCALE_ARCHIVE",
+        "PATH",
+        "PGDATA",
+        "PGDATABASE",
+        "PGPASSWORD",
+        "PGPORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER"
+      ],
+      "image": "supabase/postgres:15.8.1.085",
+      "image_id": "sha256:af083ef64d0408c8f098ee6f5c364a59b26f36fbc0f3a334a62c5c1d57362e9b",
+      "mounts": [
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/webhooks.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/roles.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-logs.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/logs.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-realtime.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/realtime.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/etc/postgresql-custom",
+          "source": "/var/lib/docker/volumes/church-retreat_db-config/_data",
+          "type": "volume",
+          "volume": "church-retreat_db-config",
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/jwt.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/_supabase.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-pooler.sql",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/pooler.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "church-retreat-db",
+      "ports": {},
+      "repo_digests": [
+        "supabase/postgres@sha256:af083ef64d0408c8f098ee6f5c364a59b26f36fbc0f3a334a62c5c1d57362e9b"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "functions",
+      "environment_keys": [
+        "DENO_TLS_CA_STORE",
+        "JWT_SECRET",
+        "PATH",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_DB_URL",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEYS",
+        "SUPABASE_SECRET_KEYS",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "SUPABASE_URL",
+        "VERIFY_JWT"
+      ],
+      "image": "local-security/church-retreat-edge-functions:emudhra-76d720d70d4d",
+      "image_id": "sha256:6bd0cad8f8ab5056315a4083ff2babc013e8d845bfaef86c35f8c5319d977da2",
+      "mounts": [
+        {
+          "destination": "/home/deno/functions",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/root/.cache/deno",
+          "source": "/var/lib/docker/volumes/church-retreat_deno-cache/_data",
+          "type": "volume",
+          "volume": "church-retreat_deno-cache",
+          "writable": true
+        }
+      ],
+      "name": "church-retreat-edge-functions",
+      "ports": {},
+      "repo_digests": [
+        "local-security/church-retreat-edge-functions@sha256:6bd0cad8f8ab5056315a4083ff2babc013e8d845bfaef86c35f8c5319d977da2"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "imgproxy",
+      "environment_keys": [
+        "AWS_LWA_ASYNC_INIT",
+        "AWS_LWA_INVOKE_MODE",
+        "AWS_LWA_READINESS_CHECK_PATH",
+        "FONTCONFIG_PATH",
+        "IMGPROXY_AUTO_WEBP",
+        "IMGPROXY_BIND",
+        "IMGPROXY_LOCAL_FILESYSTEM_ROOT",
+        "IMGPROXY_MALLOC",
+        "IMGPROXY_MAX_SRC_RESOLUTION",
+        "IMGPROXY_USE_ETAG",
+        "MALLOC_ARENA_MAX",
+        "PATH",
+        "VIPS_VECTOR",
+        "VIPS_WARNING"
+      ],
+      "image": "local-security/church-retreat-imgproxy:emudhra-7991230c8eb7",
+      "image_id": "sha256:42c2ba82d43bdb044b1cc8be9747c6f680fcae7ea0df84f103f3d278c9e67f13",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "church-retreat-imgproxy",
+      "ports": {},
+      "repo_digests": [
+        "local-security/church-retreat-imgproxy@sha256:42c2ba82d43bdb044b1cc8be9747c6f680fcae7ea0df84f103f3d278c9e67f13"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "kong",
+      "environment_keys": [
+        "ANON_KEY_ASYMMETRIC",
+        "DASHBOARD_PASSWORD",
+        "DASHBOARD_USERNAME",
+        "KONG_DATABASE",
+        "KONG_DECLARATIVE_CONFIG",
+        "KONG_DNS_NOT_FOUND_TTL",
+        "KONG_DNS_ORDER",
+        "KONG_NGINX_PROXY_PROXY_BUFFERS",
+        "KONG_NGINX_PROXY_PROXY_BUFFER_SIZE",
+        "KONG_PLUGINS",
+        "KONG_PREFIX",
+        "KONG_PROXY_ACCESS_LOG",
+        "KONG_VERSION",
+        "PATH",
+        "SERVICE_ROLE_KEY_ASYMMETRIC",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY"
+      ],
+      "image": "local-security/church-retreat-kong:emudhra-6feb8f3b414b",
+      "image_id": "sha256:6988a95c4d19a3d08c745c856993bec1d6d20b214ccd0aef1b1abea5f15ddcf8",
+      "mounts": [
+        {
+          "destination": "/home/kong/kong-entrypoint.sh",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/api/kong-entrypoint.sh",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/home/kong/temp.yml",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/api/kong.yml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "church-retreat-kong",
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "8001"
+          }
+        ],
+        "8443/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "9443"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/church-retreat-kong@sha256:6988a95c4d19a3d08c745c856993bec1d6d20b214ccd0aef1b1abea5f15ddcf8"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "meta",
+      "environment_keys": [
+        "CRYPTO_KEY",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "PG_META_DB_HOST",
+        "PG_META_DB_NAME",
+        "PG_META_DB_PASSWORD",
+        "PG_META_DB_PORT",
+        "PG_META_DB_USER",
+        "PG_META_PORT",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/church-retreat-meta:emudhra-2618940b79ed",
+      "image_id": "sha256:66c639d317372d25ac7590e11c2ccc792bb19445488f526300b9915a644ad5e1",
+      "mounts": [],
+      "name": "church-retreat-meta",
+      "ports": {},
+      "repo_digests": [
+        "local-security/church-retreat-meta@sha256:66c639d317372d25ac7590e11c2ccc792bb19445488f526300b9915a644ad5e1"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "supavisor",
+      "environment_keys": [
+        "API_JWT_SECRET",
+        "CLUSTER_POSTGRES",
+        "DATABASE_URL",
+        "DB_POOL_SIZE",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "POOLER_DEFAULT_POOL_SIZE",
+        "POOLER_MAX_CLIENT_CONN",
+        "POOLER_POOL_MODE",
+        "POOLER_TENANT_ID",
+        "PORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "REGION",
+        "RLIMIT_NOFILE",
+        "SECRET_KEY_BASE",
+        "VAULT_ENC_KEY"
+      ],
+      "image": "supabase/supavisor:2.9.5",
+      "image_id": "sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07",
+      "mounts": [
+        {
+          "destination": "/etc/pooler/pooler.exs",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/pooler/pooler.exs",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "church-retreat-pooler",
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "5433"
+          }
+        ],
+        "6543/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "6544"
+          }
+        ]
+      },
+      "repo_digests": [
+        "supabase/supavisor@sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "rest",
+      "environment_keys": [
+        "PATH",
+        "PGRST_APP_SETTINGS_JWT_EXP",
+        "PGRST_APP_SETTINGS_JWT_SECRET",
+        "PGRST_DB_ANON_ROLE",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PGRST_DB_URI",
+        "PGRST_DB_USE_LEGACY_GUCS",
+        "PGRST_JWT_SECRET"
+      ],
+      "image": "local-security/church-retreat-rest:emudhra-1fe96fe9209d",
+      "image_id": "sha256:876e1d5c3346e195c93d97e07234905d8cc89d447f6d2f198b5af53d3e21d14a",
+      "mounts": [],
+      "name": "church-retreat-rest",
+      "ports": {},
+      "repo_digests": [
+        "local-security/church-retreat-rest@sha256:876e1d5c3346e195c93d97e07234905d8cc89d447f6d2f198b5af53d3e21d14a"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "storage",
+      "environment_keys": [
+        "ANON_KEY",
+        "AUTH_JWT_SECRET",
+        "DATABASE_URL",
+        "ENABLE_IMAGE_TRANSFORMATION",
+        "FILE_SIZE_LIMIT",
+        "FILE_STORAGE_BACKEND_PATH",
+        "GLOBAL_S3_BUCKET",
+        "IMGPROXY_URL",
+        "JWT_JWKS",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "POSTGREST_URL",
+        "REGION",
+        "REQUEST_ALLOW_X_FORWARDED_PATH",
+        "S3_PROTOCOL_ACCESS_KEY_ID",
+        "S3_PROTOCOL_ACCESS_KEY_SECRET",
+        "SERVICE_KEY",
+        "STORAGE_BACKEND",
+        "STORAGE_PUBLIC_URL",
+        "TENANT_ID",
+        "VERSION",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/church-retreat-storage:emudhra-bb87672059d7",
+      "image_id": "sha256:b7e8afc1a699e771036103b68d93704442c5b6c6a294c5eb6c5d99de9073e6ad",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "church-retreat-storage",
+      "ports": {},
+      "repo_digests": [
+        "local-security/church-retreat-storage@sha256:b7e8afc1a699e771036103b68d93704442c5b6c6a294c5eb6c5d99de9073e6ad"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "studio",
+      "environment_keys": [
+        "AUTH_JWT_SECRET",
+        "DEFAULT_ORGANIZATION_NAME",
+        "DEFAULT_PROJECT_NAME",
+        "EDGE_FUNCTIONS_MANAGEMENT_FOLDER",
+        "ENABLED_FEATURES_LOGS_ALL",
+        "HOSTNAME",
+        "NODE_VERSION",
+        "OPENAI_API_KEY",
+        "PATH",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PG_META_CRYPTO_KEY",
+        "PNPM_HOME",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "SNIPPETS_MANAGEMENT_FOLDER",
+        "STUDIO_PG_META_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY",
+        "SUPABASE_URL",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/church-retreat-studio:emudhra-6ec042b2872d",
+      "image_id": "sha256:787297dfc1c7b897056fa8e5429733fda52e459ef2dae7fe9bb043a63492ec68",
+      "mounts": [
+        {
+          "destination": "/app/edge-functions",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/app/snippets",
+          "source": "~/Developer/church-retreat-supabase/docker/volumes/snippets",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "church-retreat-studio",
+      "ports": {},
+      "repo_digests": [
+        "local-security/church-retreat-studio@sha256:787297dfc1c7b897056fa8e5429733fda52e459ef2dae7fe9bb043a63492ec68"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "claudeslop",
+      "compose_service": "web",
+      "environment_keys": [
+        "APP_URL",
+        "DATA_DIR",
+        "HOST",
+        "NODE_ENV",
+        "NODE_VERSION",
+        "PATH",
+        "PORT",
+        "TRUST_PROXY",
+        "YARN_VERSION"
+      ],
+      "image": "claudeslop-web",
+      "image_id": "sha256:04e91c815807ac8722944c67c828f73e44356d8c2bdf326d6aec3f12ad0033a1",
+      "mounts": [
+        {
+          "destination": "/data",
+          "source": "/var/lib/docker/volumes/claudeslop_claudeslop-data/_data",
+          "type": "volume",
+          "volume": "claudeslop_claudeslop-data",
+          "writable": true
+        }
+      ],
+      "name": "claudeslop",
+      "ports": {
+        "4317/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "4317"
+          }
+        ]
+      },
+      "repo_digests": [
+        "claudeslop-web@sha256:04e91c815807ac8722944c67c828f73e44356d8c2bdf326d6aec3f12ad0033a1"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion",
+      "compose_service": "arena",
+      "environment_keys": [
+        "NODE_VERSION",
+        "PATH",
+        "YARN_VERSION"
+      ],
+      "image": "grindion-arena",
+      "image_id": "sha256:f3a07d7b588627751a902a690f1ddf217a9b7bfb7186ba3d8d8a60b499d7e034",
+      "mounts": [],
+      "name": "grindion-arena",
+      "ports": {},
+      "repo_digests": [
+        "grindion-arena@sha256:f3a07d7b588627751a902a690f1ddf217a9b7bfb7186ba3d8d8a60b499d7e034"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "auth",
+      "environment_keys": [
+        "API_EXTERNAL_URL",
+        "GOTRUE_API_HOST",
+        "GOTRUE_API_PORT",
+        "GOTRUE_DB_DATABASE_URL",
+        "GOTRUE_DB_DRIVER",
+        "GOTRUE_DB_MIGRATIONS_PATH",
+        "GOTRUE_DISABLE_SIGNUP",
+        "GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED",
+        "GOTRUE_EXTERNAL_EMAIL_ENABLED",
+        "GOTRUE_EXTERNAL_PHONE_ENABLED",
+        "GOTRUE_JWT_ADMIN_ROLES",
+        "GOTRUE_JWT_AUD",
+        "GOTRUE_JWT_DEFAULT_GROUP_NAME",
+        "GOTRUE_JWT_EXP",
+        "GOTRUE_JWT_ISSUER",
+        "GOTRUE_JWT_KEYS",
+        "GOTRUE_JWT_SECRET",
+        "GOTRUE_MAILER_AUTOCONFIRM",
+        "GOTRUE_MAILER_URLPATHS_CONFIRMATION",
+        "GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE",
+        "GOTRUE_MAILER_URLPATHS_INVITE",
+        "GOTRUE_MAILER_URLPATHS_RECOVERY",
+        "GOTRUE_SITE_URL",
+        "GOTRUE_SMS_AUTOCONFIRM",
+        "GOTRUE_SMTP_ADMIN_EMAIL",
+        "GOTRUE_SMTP_HOST",
+        "GOTRUE_SMTP_PASS",
+        "GOTRUE_SMTP_PORT",
+        "GOTRUE_SMTP_SENDER_NAME",
+        "GOTRUE_SMTP_USER",
+        "GOTRUE_URI_ALLOW_LIST",
+        "PATH"
+      ],
+      "image": "local-security/grindion-supabase-auth:emudhra-bf68d97ac1f1",
+      "image_id": "sha256:4c72879805cead98c01160de13a2a54e0e83e3e542a684abb869a4a42c5de429",
+      "mounts": [],
+      "name": "grindion-supabase-auth",
+      "ports": {},
+      "repo_digests": [
+        "local-security/grindion-supabase-auth@sha256:4c72879805cead98c01160de13a2a54e0e83e3e542a684abb869a4a42c5de429"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "db",
+      "environment_keys": [
+        "GRN_PLUGINS_DIR",
+        "JWT_EXP",
+        "JWT_SECRET",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "LOCALE_ARCHIVE",
+        "PATH",
+        "PGDATA",
+        "PGDATABASE",
+        "PGPASSWORD",
+        "PGPORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_INITDB_ARGS",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER"
+      ],
+      "image": "supabase/postgres:17.6.1.136",
+      "image_id": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+      "mounts": [
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
+          "source": "~/Developer/grindion-supabase/volumes/db/jwt.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-logs.sql",
+          "source": "~/Developer/grindion-supabase/volumes/db/logs.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-pooler.sql",
+          "source": "~/Developer/grindion-supabase/volumes/db/pooler.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/etc/postgresql-custom",
+          "source": "/var/lib/docker/volumes/grindion-supabase_db-config/_data",
+          "type": "volume",
+          "volume": "grindion-supabase_db-config",
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "~/Developer/grindion-supabase/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
+          "source": "~/Developer/grindion-supabase/volumes/db/roles.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
+          "source": "~/Developer/grindion-supabase/volumes/db/_supabase.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-realtime.sql",
+          "source": "~/Developer/grindion-supabase/volumes/db/realtime.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
+          "source": "~/Developer/grindion-supabase/volumes/db/webhooks.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "grindion-supabase-db",
+      "ports": {},
+      "repo_digests": [
+        "supabase/postgres@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "functions",
+      "environment_keys": [
+        "DENO_TLS_CA_STORE",
+        "JWT_SECRET",
+        "PATH",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_DB_URL",
+        "SUPABASE_JWKS",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEYS",
+        "SUPABASE_SECRET_KEYS",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "SUPABASE_URL",
+        "VERIFY_JWT"
+      ],
+      "image": "local-security/grindion-supabase-edge-functions:emudhra-831bc1fd918b",
+      "image_id": "sha256:8c4fabd269928b5798c44642fcd55f6f9914c1f70f6c73253bd16bb3aca39045",
+      "mounts": [
+        {
+          "destination": "/home/deno/functions",
+          "source": "~/Developer/grindion-supabase/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/root/.cache/deno",
+          "source": "/var/lib/docker/volumes/grindion-supabase_deno-cache/_data",
+          "type": "volume",
+          "volume": "grindion-supabase_deno-cache",
+          "writable": true
+        }
+      ],
+      "name": "grindion-supabase-edge-functions",
+      "ports": {},
+      "repo_digests": [
+        "local-security/grindion-supabase-edge-functions@sha256:8c4fabd269928b5798c44642fcd55f6f9914c1f70f6c73253bd16bb3aca39045"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "imgproxy",
+      "environment_keys": [
+        "AWS_LWA_ASYNC_INIT",
+        "AWS_LWA_INVOKE_MODE",
+        "AWS_LWA_READINESS_CHECK_PATH",
+        "FONTCONFIG_PATH",
+        "IMGPROXY_AUTO_WEBP",
+        "IMGPROXY_BIND",
+        "IMGPROXY_LOCAL_FILESYSTEM_ROOT",
+        "IMGPROXY_MALLOC",
+        "IMGPROXY_MAX_SRC_RESOLUTION",
+        "IMGPROXY_USE_ETAG",
+        "MALLOC_ARENA_MAX",
+        "PATH",
+        "VIPS_VECTOR",
+        "VIPS_WARNING"
+      ],
+      "image": "local-security/grindion-supabase-imgproxy:emudhra-956c1d2f62cd",
+      "image_id": "sha256:baf52df14706241704679df66063386ca34699e9b435b287c46d6872927f6c02",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/grindion-supabase/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "grindion-supabase-imgproxy",
+      "ports": {},
+      "repo_digests": [
+        "local-security/grindion-supabase-imgproxy@sha256:baf52df14706241704679df66063386ca34699e9b435b287c46d6872927f6c02"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "kong",
+      "environment_keys": [
+        "ANON_KEY_ASYMMETRIC",
+        "DASHBOARD_PASSWORD",
+        "DASHBOARD_USERNAME",
+        "KONG_DATABASE",
+        "KONG_DECLARATIVE_CONFIG",
+        "KONG_DNS_NOT_FOUND_TTL",
+        "KONG_DNS_ORDER",
+        "KONG_NGINX_PROXY_PROXY_BUFFERS",
+        "KONG_NGINX_PROXY_PROXY_BUFFER_SIZE",
+        "KONG_PLUGINS",
+        "KONG_PREFIX",
+        "KONG_PROXY_ACCESS_LOG",
+        "KONG_ROUTER_FLAVOR",
+        "KONG_VERSION",
+        "PATH",
+        "SERVICE_ROLE_KEY_ASYMMETRIC",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY"
+      ],
+      "image": "local-security/grindion-supabase-kong:emudhra-a1806a4c4e02",
+      "image_id": "sha256:48e759747f0febe39c7134bd3ad576d8ce0624277685e0738a3237f5bad555da",
+      "mounts": [
+        {
+          "destination": "/home/kong/kong-entrypoint.sh",
+          "source": "~/Developer/grindion-supabase/volumes/api/kong-entrypoint.sh",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/home/kong/temp.yml",
+          "source": "~/Developer/grindion-supabase/volumes/api/kong.yml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "grindion-supabase-kong",
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8002"
+          }
+        ],
+        "8443/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "9444"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/grindion-supabase-kong@sha256:48e759747f0febe39c7134bd3ad576d8ce0624277685e0738a3237f5bad555da"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "meta",
+      "environment_keys": [
+        "CRYPTO_KEY",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "PG_META_DB_HOST",
+        "PG_META_DB_NAME",
+        "PG_META_DB_PASSWORD",
+        "PG_META_DB_PORT",
+        "PG_META_DB_USER",
+        "PG_META_PORT",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/grindion-supabase-meta:emudhra-0be3e697bb48",
+      "image_id": "sha256:f4bbb07806aa554c45c933976840c8dd6505745b8595d571e1ce307e1e20bfea",
+      "mounts": [],
+      "name": "grindion-supabase-meta",
+      "ports": {},
+      "repo_digests": [
+        "local-security/grindion-supabase-meta@sha256:f4bbb07806aa554c45c933976840c8dd6505745b8595d571e1ce307e1e20bfea"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "supavisor",
+      "environment_keys": [
+        "API_JWT_SECRET",
+        "CLUSTER_POSTGRES",
+        "DATABASE_URL",
+        "DB_POOL_SIZE",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "POOLER_DEFAULT_POOL_SIZE",
+        "POOLER_MAX_CLIENT_CONN",
+        "POOLER_POOL_MODE",
+        "POOLER_TENANT_ID",
+        "PORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "REGION",
+        "RLIMIT_NOFILE",
+        "SECRET_KEY_BASE",
+        "VAULT_ENC_KEY"
+      ],
+      "image": "supabase/supavisor:2.9.5",
+      "image_id": "sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07",
+      "mounts": [
+        {
+          "destination": "/etc/pooler/pooler.exs",
+          "source": "~/Developer/grindion-supabase/volumes/pooler/pooler.exs",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "grindion-supabase-pooler",
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "5434"
+          }
+        ],
+        "6543/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "6545"
+          }
+        ]
+      },
+      "repo_digests": [
+        "supabase/supavisor@sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "rest",
+      "environment_keys": [
+        "PATH",
+        "PGRST_ADMIN_SERVER_HOST",
+        "PGRST_ADMIN_SERVER_PORT",
+        "PGRST_APP_SETTINGS_JWT_EXP",
+        "PGRST_APP_SETTINGS_JWT_SECRET",
+        "PGRST_DB_ANON_ROLE",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PGRST_DB_URI",
+        "PGRST_DB_USE_LEGACY_GUCS",
+        "PGRST_JWT_SECRET"
+      ],
+      "image": "local-security/grindion-supabase-rest:emudhra-ac797266f48a",
+      "image_id": "sha256:4a11d086d04142fd47577bad5744a5d970bc60633d72cf0b3749513a05f0b55b",
+      "mounts": [],
+      "name": "grindion-supabase-rest",
+      "ports": {},
+      "repo_digests": [
+        "local-security/grindion-supabase-rest@sha256:4a11d086d04142fd47577bad5744a5d970bc60633d72cf0b3749513a05f0b55b"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "storage",
+      "environment_keys": [
+        "ANON_KEY",
+        "AUTH_JWT_SECRET",
+        "DATABASE_URL",
+        "ENABLE_IMAGE_TRANSFORMATION",
+        "FILE_SIZE_LIMIT",
+        "FILE_STORAGE_BACKEND_PATH",
+        "GLOBAL_S3_BUCKET",
+        "IMGPROXY_URL",
+        "JWT_JWKS",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "POSTGREST_URL",
+        "REGION",
+        "REQUEST_ALLOW_X_FORWARDED_PATH",
+        "S3_PROTOCOL_ACCESS_KEY_ID",
+        "S3_PROTOCOL_ACCESS_KEY_SECRET",
+        "SERVICE_KEY",
+        "STORAGE_BACKEND",
+        "STORAGE_PUBLIC_URL",
+        "TENANT_ID",
+        "VERSION",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/grindion-supabase-storage:emudhra-1871692bfc1e",
+      "image_id": "sha256:2e99dc650135d469e95c011ef6ef2815eebe1dfd82100c32620201f676916046",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/grindion-supabase/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "grindion-supabase-storage",
+      "ports": {},
+      "repo_digests": [
+        "local-security/grindion-supabase-storage@sha256:2e99dc650135d469e95c011ef6ef2815eebe1dfd82100c32620201f676916046"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "studio",
+      "environment_keys": [
+        "AUTH_JWT_SECRET",
+        "DEFAULT_ORGANIZATION_NAME",
+        "DEFAULT_PROJECT_NAME",
+        "EDGE_FUNCTIONS_MANAGEMENT_FOLDER",
+        "ENABLED_FEATURES_LOGS_ALL",
+        "HOSTNAME",
+        "NODE_VERSION",
+        "OPENAI_API_KEY",
+        "PATH",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PG_META_CRYPTO_KEY",
+        "PNPM_HOME",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER_READ_WRITE",
+        "SNIPPETS_MANAGEMENT_FOLDER",
+        "STUDIO_PG_META_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY",
+        "SUPABASE_URL",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/grindion-supabase-studio:emudhra-29d9148c7d33",
+      "image_id": "sha256:6711ba6a2d253ed9e44b471303dc6d821df215038187729d63b373411b925c9f",
+      "mounts": [
+        {
+          "destination": "/app/edge-functions",
+          "source": "~/Developer/grindion-supabase/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/app/snippets",
+          "source": "~/Developer/grindion-supabase/volumes/snippets",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "grindion-supabase-studio",
+      "ports": {},
+      "repo_digests": [
+        "local-security/grindion-supabase-studio@sha256:6711ba6a2d253ed9e44b471303dc6d821df215038187729d63b373411b925c9f"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion",
+      "compose_service": "web",
+      "environment_keys": [
+        "ACME_VERSION",
+        "DYNPKG_RELEASE",
+        "NGINX_VERSION",
+        "NJS_RELEASE",
+        "NJS_VERSION",
+        "PATH",
+        "PKG_RELEASE"
+      ],
+      "image": "grindion-web",
+      "image_id": "sha256:44d93ace6509bc59921ae6b92dc78f759fda02e6bd7f8db04b44c5f40ad545c3",
+      "mounts": [],
+      "name": "grindion-web",
+      "ports": {
+        "80/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8087"
+          }
+        ]
+      },
+      "repo_digests": [
+        "grindion-web@sha256:44d93ace6509bc59921ae6b92dc78f759fda02e6bd7f8db04b44c5f40ad545c3"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "invidious",
+      "compose_service": "invidious",
+      "environment_keys": [
+        "PATH"
+      ],
+      "image": "local-security/invidious-invidious-1:emudhra-d4dfd6400ed6",
+      "image_id": "sha256:038376062ca3ba955b93a4c4290cb09d70857af66ba072808f2fa19e20b6c5a1",
+      "mounts": [
+        {
+          "destination": "/invidious/config/config.yml",
+          "source": "~/Developer/invidious/invidious-config.yml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "invidious-invidious-1",
+      "ports": {
+        "3000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8976"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/invidious-invidious-1@sha256:038376062ca3ba955b93a4c4290cb09d70857af66ba072808f2fa19e20b6c5a1"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "invidious",
+      "compose_service": "invidious-companion",
+      "environment_keys": [
+        "DENO_TLS_CA_STORE",
+        "HOST",
+        "PATH",
+        "PORT",
+        "SERVER_BASE_PATH",
+        "SERVER_SECRET_KEY",
+        "SSL_CERT_DIR",
+        "SSL_CERT_FILE",
+        "THC_PATH",
+        "THC_PORT_NAME",
+        "THC_VERSION",
+        "TINI_VERSION"
+      ],
+      "image": "local-security/invidious-invidious-companion-1:emudhra-8dec414872a7",
+      "image_id": "sha256:84d4421729da471cc0febe7b3c6211a87733c82cd9d36e1554906f537fde1b16",
+      "mounts": [],
+      "name": "invidious-invidious-companion-1",
+      "ports": {},
+      "repo_digests": [
+        "local-security/invidious-invidious-companion-1@sha256:84d4421729da471cc0febe7b3c6211a87733c82cd9d36e1554906f537fde1b16"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "invidious",
+      "compose_service": "invidious-db",
+      "environment_keys": [
+        "GOSU_VERSION",
+        "LANG",
+        "PATH",
+        "PGDATA",
+        "PG_MAJOR",
+        "PG_VERSION",
+        "POSTGRES_DB",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_USER"
+      ],
+      "image": "docker.io/library/postgres:14",
+      "image_id": "sha256:3e7dd0bfd7bfb4fc1278d1a354da44375dfe924bed8eaf83ae14967d84dede5b",
+      "mounts": [
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "/var/lib/docker/volumes/invidious_postgresdata/_data",
+          "type": "volume",
+          "volume": "invidious_postgresdata",
+          "writable": true
+        }
+      ],
+      "name": "invidious-invidious-db-1",
+      "ports": {},
+      "repo_digests": [
+        "postgres@sha256:3e7dd0bfd7bfb4fc1278d1a354da44375dfe924bed8eaf83ae14967d84dede5b"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "picpeak",
+      "compose_service": "backend",
+      "environment_keys": [
+        "ADMIN_EMAIL",
+        "ADMIN_PASSWORD",
+        "ADMIN_URL",
+        "ADMIN_USERNAME",
+        "API_URL",
+        "DATABASE_CLIENT",
+        "DB_HOST",
+        "DB_NAME",
+        "DB_PASSWORD",
+        "DB_PORT",
+        "DB_TYPE",
+        "DB_USER",
+        "EMAIL_FROM",
+        "EMAIL_WEBHOOK_ALLOW_PRIVATE_URLS",
+        "EMAIL_WEBHOOK_SECRET",
+        "EMAIL_WEBHOOK_URL",
+        "EXTERNAL_MEDIA_ROOT",
+        "EXTERNAL_MEDIA_WATCH",
+        "EXTERNAL_MEDIA_WATCH_DEBOUNCE_MS",
+        "EXTERNAL_MEDIA_WATCH_POLLING",
+        "EXTERNAL_MEDIA_WATCH_POLL_INTERVAL_MS",
+        "EXTERNAL_MEDIA_WATCH_STABILITY_MS",
+        "EXTERNAL_MEDIA_WATCH_SWEEP_INTERVAL_MS",
+        "FACE_ML_TOKEN",
+        "FACE_ML_URL",
+        "FACE_PROCESSOR_CONCURRENCY",
+        "FILE_WATCHER_CONCURRENCY",
+        "FRONTEND_URL",
+        "GUEST_TOKEN_TTL",
+        "INTEGRATION_PRIVATE_ORIGINS",
+        "JWT_SECRET",
+        "NODE_ENV",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "OIDC_BREAK_GLASS",
+        "OIDC_ENCRYPTION_KEY",
+        "PATH",
+        "PORT",
+        "RATE_LIMIT_NETWORK_MULTIPLIER",
+        "SMTP_HOST",
+        "SMTP_PASS",
+        "SMTP_PORT",
+        "SMTP_SECURE",
+        "SMTP_USER",
+        "STORAGE_PATH",
+        "TZ",
+        "USAGE_COLLECTOR_URL",
+        "USAGE_ENCRYPTION_KEY",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/picpeak-backend:emudhra-watermark-url-version-20261022",
+      "image_id": "sha256:cf53be3bc21d22f0730d8f700e1d98d7aafea43a1bd685f610cd18c2267710f3",
+      "mounts": [
+        {
+          "destination": "/app/events",
+          "source": "~/Developer/picpeak/events",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/app/data",
+          "source": "~/Developer/picpeak/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/app/logs",
+          "source": "~/Developer/picpeak/logs",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/backup",
+          "source": "~/Developer/picpeak/backup",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/app/storage",
+          "source": "~/Developer/picpeak/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/run/secrets",
+          "source": "/var/lib/docker/volumes/picpeak_picpeak-secrets/_data",
+          "type": "volume",
+          "volume": "picpeak_picpeak-secrets",
+          "writable": false
+        }
+      ],
+      "name": "picpeak-backend",
+      "ports": {
+        "3000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "3001"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/picpeak-backend@sha256:cf53be3bc21d22f0730d8f700e1d98d7aafea43a1bd685f610cd18c2267710f3"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "picpeak",
+      "compose_service": "frontend",
+      "environment_keys": [
+        "ACME_VERSION",
+        "BRAND_DESCRIPTION",
+        "BRAND_TITLE",
+        "DYNPKG_RELEASE",
+        "NGINX_VERSION",
+        "NJS_RELEASE",
+        "NJS_VERSION",
+        "NODE_ENV",
+        "PATH",
+        "PKG_RELEASE"
+      ],
+      "image": "local-security/picpeak-frontend:emudhra-credit-reminder-20261026",
+      "image_id": "sha256:a7489ac1a9d8ffb6c33b96d23aadb6907909560a2c405d6bbdb3cabff842c101",
+      "mounts": [],
+      "name": "picpeak-frontend",
+      "ports": {
+        "80/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8086"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/picpeak-frontend@sha256:a7489ac1a9d8ffb6c33b96d23aadb6907909560a2c405d6bbdb3cabff842c101"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "picpeak",
+      "compose_service": "mailhog",
+      "environment_keys": [
+        "GOLANG_VERSION",
+        "GOPATH",
+        "PATH"
+      ],
+      "image": "local-security/picpeak-mailhog:emudhra-bundle-6f83e371d667",
+      "image_id": "sha256:484266d30357fd90492ef8fbec67660ce2d235949c1774a5bc922dc0bffc7bae",
+      "mounts": [],
+      "name": "picpeak-mailhog",
+      "ports": {
+        "1025/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "1026"
+          }
+        ],
+        "8025/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "8026"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/picpeak-mailhog@sha256:484266d30357fd90492ef8fbec67660ce2d235949c1774a5bc922dc0bffc7bae"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "picpeak",
+      "compose_service": "postgres",
+      "environment_keys": [
+        "DOCKER_PG_LLVM_DEPS",
+        "GOSU_VERSION",
+        "LANG",
+        "PATH",
+        "PGDATA",
+        "PG_MAJOR",
+        "PG_SHA256",
+        "PG_VERSION",
+        "POSTGRES_DB",
+        "POSTGRES_PASSWORD_FILE",
+        "POSTGRES_USER",
+        "TZ"
+      ],
+      "image": "postgres:15-alpine",
+      "image_id": "sha256:cd17e2ac98240fce1541ad2a803b34009b4eea5aec8a832363cdc7eca62e722e",
+      "mounts": [
+        {
+          "destination": "/run/secrets",
+          "source": "/var/lib/docker/volumes/picpeak_picpeak-db-secret/_data",
+          "type": "volume",
+          "volume": "picpeak_picpeak-db-secret",
+          "writable": false
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "/var/lib/docker/volumes/picpeak_postgres-data/_data",
+          "type": "volume",
+          "volume": "picpeak_postgres-data",
+          "writable": true
+        }
+      ],
+      "name": "picpeak-postgres",
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "5435"
+          }
+        ]
+      },
+      "repo_digests": [
+        "postgres@sha256:cd17e2ac98240fce1541ad2a803b34009b4eea5aec8a832363cdc7eca62e722e"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "picpeak",
+      "compose_service": "redis",
+      "environment_keys": [
+        "PATH",
+        "REDIS_VERSION"
+      ],
+      "image": "redis:7-alpine",
+      "image_id": "sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99",
+      "mounts": [
+        {
+          "destination": "/data",
+          "source": "/var/lib/docker/volumes/picpeak_redis-data/_data",
+          "type": "volume",
+          "volume": "picpeak_redis-data",
+          "writable": true
+        },
+        {
+          "destination": "/run/secrets",
+          "source": "/var/lib/docker/volumes/picpeak_picpeak-redis-secret/_data",
+          "type": "volume",
+          "volume": "picpeak_picpeak-redis-secret",
+          "writable": false
+        }
+      ],
+      "name": "picpeak-redis",
+      "ports": {
+        "6379/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "6385"
+          }
+        ]
+      },
+      "repo_digests": [
+        "redis@sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "picpeak",
+      "compose_service": "secrets-init",
+      "environment_keys": [
+        "ADMIN_URL",
+        "API_URL",
+        "APP_DATA",
+        "APP_STORAGE",
+        "BACKEND_PORT",
+        "BRAND_DESCRIPTION",
+        "BRAND_TITLE",
+        "DATABASE_CLIENT",
+        "DB_NAME",
+        "DB_PORT",
+        "DB_USER",
+        "FRONTEND_PORT",
+        "FRONTEND_URL",
+        "LOGS",
+        "MAILHOG_SMTP_PORT",
+        "MAILHOG_UI_PORT",
+        "NODE_ENV",
+        "PATH",
+        "PICPEAK_CHANNEL",
+        "REDIS_PORT",
+        "TZ",
+        "UPDATE_CHECK_ENABLED"
+      ],
+      "image": "alpine:3.20",
+      "image_id": "sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc",
+      "mounts": [
+        {
+          "destination": "/run/db-secret",
+          "source": "/var/lib/docker/volumes/picpeak_picpeak-db-secret/_data",
+          "type": "volume",
+          "volume": "picpeak_picpeak-db-secret",
+          "writable": true
+        },
+        {
+          "destination": "/run/redis-secret",
+          "source": "/var/lib/docker/volumes/picpeak_picpeak-redis-secret/_data",
+          "type": "volume",
+          "volume": "picpeak_picpeak-redis-secret",
+          "writable": true
+        },
+        {
+          "destination": "/run/secrets",
+          "source": "/var/lib/docker/volumes/picpeak_picpeak-secrets/_data",
+          "type": "volume",
+          "volume": "picpeak_picpeak-secrets",
+          "writable": true
+        }
+      ],
+      "name": "picpeak-secrets-init",
+      "ports": {},
+      "repo_digests": [
+        "alpine@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc"
+      ],
+      "restart": "no",
+      "state": "exited"
+    },
+    {
+      "compose_project": "qbot",
+      "compose_service": "qbot",
+      "environment_keys": [
+        "DISCORD_TOKEN",
+        "ENABLE_LEVENSHTEIN_DISTANCE",
+        "ENABLE_LLM_CHECKS",
+        "OLLAMA_URL",
+        "PATH",
+        "RUST_LOG"
+      ],
+      "image": "ghcr.io/thatxliner/qbot@sha256:1b2a6169a294c30239636244a0594910e805be98d880bb465e1d7df7519a47fe",
+      "image_id": "sha256:1b2a6169a294c30239636244a0594910e805be98d880bb465e1d7df7519a47fe",
+      "mounts": [],
+      "name": "qbot",
+      "ports": {},
+      "repo_digests": [
+        "ghcr.io/thatxliner/qbot@sha256:1b2a6169a294c30239636244a0594910e805be98d880bb465e1d7df7519a47fe"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "relay",
+      "environment_keys": [
+        "ALLOWED_ORIGINS",
+        "BUN_INSTALL_BIN",
+        "BUN_RUNTIME_TRANSPILER_CACHE_PATH",
+        "HOST",
+        "LOG_LEVEL",
+        "NODE_ENV",
+        "NODE_VERSION",
+        "PATH",
+        "PERSIST_DEBOUNCE_MS",
+        "PORT",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "SUPABASE_URL"
+      ],
+      "image": "quillium-relay:latest",
+      "image_id": "sha256:aaf461311fdc22b75494f5cccb48027db2b5a3dd79e649a29c83a1eece920c09",
+      "mounts": [],
+      "name": "quillium-relay",
+      "ports": {
+        "3001/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "4000"
+          }
+        ]
+      },
+      "repo_digests": [
+        "quillium-relay@sha256:aaf461311fdc22b75494f5cccb48027db2b5a3dd79e649a29c83a1eece920c09"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "auth",
+      "environment_keys": [
+        "API_EXTERNAL_URL",
+        "GOTRUE_API_HOST",
+        "GOTRUE_API_PORT",
+        "GOTRUE_DB_DATABASE_URL",
+        "GOTRUE_DB_DRIVER",
+        "GOTRUE_DB_MIGRATIONS_PATH",
+        "GOTRUE_DISABLE_SIGNUP",
+        "GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED",
+        "GOTRUE_EXTERNAL_EMAIL_ENABLED",
+        "GOTRUE_EXTERNAL_PHONE_ENABLED",
+        "GOTRUE_JWT_ADMIN_ROLES",
+        "GOTRUE_JWT_AUD",
+        "GOTRUE_JWT_DEFAULT_GROUP_NAME",
+        "GOTRUE_JWT_EXP",
+        "GOTRUE_JWT_ISSUER",
+        "GOTRUE_JWT_KEYS",
+        "GOTRUE_JWT_SECRET",
+        "GOTRUE_MAILER_AUTOCONFIRM",
+        "GOTRUE_MAILER_URLPATHS_CONFIRMATION",
+        "GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE",
+        "GOTRUE_MAILER_URLPATHS_INVITE",
+        "GOTRUE_MAILER_URLPATHS_RECOVERY",
+        "GOTRUE_SITE_URL",
+        "GOTRUE_SMS_AUTOCONFIRM",
+        "GOTRUE_SMTP_ADMIN_EMAIL",
+        "GOTRUE_SMTP_HOST",
+        "GOTRUE_SMTP_PASS",
+        "GOTRUE_SMTP_PORT",
+        "GOTRUE_SMTP_SENDER_NAME",
+        "GOTRUE_SMTP_USER",
+        "GOTRUE_URI_ALLOW_LIST",
+        "PATH"
+      ],
+      "image": "local-security/quillium-supabase-auth:emudhra-4bda28bd33d2",
+      "image_id": "sha256:13f41fc9c2da237aea15f71c8946bb043818c236acd9021d68c54a49dad6f6ae",
+      "mounts": [],
+      "name": "quillium-supabase-auth",
+      "ports": {},
+      "repo_digests": [
+        "local-security/quillium-supabase-auth@sha256:13f41fc9c2da237aea15f71c8946bb043818c236acd9021d68c54a49dad6f6ae"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "db",
+      "environment_keys": [
+        "GRN_PLUGINS_DIR",
+        "JWT_EXP",
+        "JWT_SECRET",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "LOCALE_ARCHIVE",
+        "PATH",
+        "PGDATA",
+        "PGDATABASE",
+        "PGPASSWORD",
+        "PGPORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_INITDB_ARGS",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER"
+      ],
+      "image": "supabase/postgres:17.6.1.136",
+      "image_id": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+      "mounts": [
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
+          "source": "~/Developer/quillium-supabase/volumes/db/jwt.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
+          "source": "~/Developer/quillium-supabase/volumes/db/roles.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-realtime.sql",
+          "source": "~/Developer/quillium-supabase/volumes/db/realtime.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/etc/postgresql-custom",
+          "source": "/var/lib/docker/volumes/quillium-supabase_db-config/_data",
+          "type": "volume",
+          "volume": "quillium-supabase_db-config",
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
+          "source": "~/Developer/quillium-supabase/volumes/db/webhooks.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
+          "source": "~/Developer/quillium-supabase/volumes/db/_supabase.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-logs.sql",
+          "source": "~/Developer/quillium-supabase/volumes/db/logs.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-pooler.sql",
+          "source": "~/Developer/quillium-supabase/volumes/db/pooler.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "~/Developer/quillium-supabase/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "quillium-supabase-db",
+      "ports": {},
+      "repo_digests": [
+        "supabase/postgres@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "functions",
+      "environment_keys": [
+        "DENO_TLS_CA_STORE",
+        "JWT_SECRET",
+        "PATH",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_DB_URL",
+        "SUPABASE_JWKS",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEYS",
+        "SUPABASE_SECRET_KEYS",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "SUPABASE_URL",
+        "VERIFY_JWT"
+      ],
+      "image": "local-security/quillium-supabase-edge-functions:emudhra-120752c1481b",
+      "image_id": "sha256:475952f61ff695eee7e7e66b67719df7f97689adad6e8f0b2d1289523e80f595",
+      "mounts": [
+        {
+          "destination": "/home/deno/functions",
+          "source": "~/Developer/quillium-supabase/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/root/.cache/deno",
+          "source": "/var/lib/docker/volumes/quillium-supabase_deno-cache/_data",
+          "type": "volume",
+          "volume": "quillium-supabase_deno-cache",
+          "writable": true
+        }
+      ],
+      "name": "quillium-supabase-edge-functions",
+      "ports": {},
+      "repo_digests": [
+        "local-security/quillium-supabase-edge-functions@sha256:475952f61ff695eee7e7e66b67719df7f97689adad6e8f0b2d1289523e80f595"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "imgproxy",
+      "environment_keys": [
+        "AWS_LWA_ASYNC_INIT",
+        "AWS_LWA_INVOKE_MODE",
+        "AWS_LWA_READINESS_CHECK_PATH",
+        "FONTCONFIG_PATH",
+        "IMGPROXY_AUTO_WEBP",
+        "IMGPROXY_BIND",
+        "IMGPROXY_LOCAL_FILESYSTEM_ROOT",
+        "IMGPROXY_MALLOC",
+        "IMGPROXY_MAX_SRC_RESOLUTION",
+        "IMGPROXY_USE_ETAG",
+        "MALLOC_ARENA_MAX",
+        "PATH",
+        "VIPS_VECTOR",
+        "VIPS_WARNING"
+      ],
+      "image": "local-security/quillium-supabase-imgproxy:emudhra-22b3345fb88d",
+      "image_id": "sha256:cca293b874e2743f732b49106d60fe5df0f8b671e4a8f0f4163d67626b98ec89",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/quillium-supabase/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "quillium-supabase-imgproxy",
+      "ports": {},
+      "repo_digests": [
+        "local-security/quillium-supabase-imgproxy@sha256:cca293b874e2743f732b49106d60fe5df0f8b671e4a8f0f4163d67626b98ec89"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "kong",
+      "environment_keys": [
+        "ANON_KEY_ASYMMETRIC",
+        "DASHBOARD_PASSWORD",
+        "DASHBOARD_USERNAME",
+        "KONG_DATABASE",
+        "KONG_DECLARATIVE_CONFIG",
+        "KONG_DNS_NOT_FOUND_TTL",
+        "KONG_DNS_ORDER",
+        "KONG_NGINX_PROXY_PROXY_BUFFERS",
+        "KONG_NGINX_PROXY_PROXY_BUFFER_SIZE",
+        "KONG_PLUGINS",
+        "KONG_PREFIX",
+        "KONG_PROXY_ACCESS_LOG",
+        "KONG_ROUTER_FLAVOR",
+        "KONG_VERSION",
+        "PATH",
+        "SERVICE_ROLE_KEY_ASYMMETRIC",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY"
+      ],
+      "image": "local-security/quillium-supabase-kong:emudhra-062dc2e1db58",
+      "image_id": "sha256:52c405f6b0bdda9ea4487906e7241e0c944e9687f461e6601818b81bb07998ab",
+      "mounts": [
+        {
+          "destination": "/home/kong/kong-entrypoint.sh",
+          "source": "~/Developer/quillium-supabase/volumes/api/kong-entrypoint.sh",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/home/kong/temp.yml",
+          "source": "~/Developer/quillium-supabase/volumes/api/kong.yml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "quillium-supabase-kong",
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8004"
+          }
+        ],
+        "8443/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "9446"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/quillium-supabase-kong@sha256:52c405f6b0bdda9ea4487906e7241e0c944e9687f461e6601818b81bb07998ab"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "meta",
+      "environment_keys": [
+        "CRYPTO_KEY",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "PG_META_DB_HOST",
+        "PG_META_DB_NAME",
+        "PG_META_DB_PASSWORD",
+        "PG_META_DB_PORT",
+        "PG_META_DB_USER",
+        "PG_META_PORT",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/quillium-supabase-meta:emudhra-d53124cf997b",
+      "image_id": "sha256:6582ee7c7a514deb4577aac72a7ca12c553827ed81c116c949b5e07e93f90a85",
+      "mounts": [],
+      "name": "quillium-supabase-meta",
+      "ports": {},
+      "repo_digests": [
+        "local-security/quillium-supabase-meta@sha256:6582ee7c7a514deb4577aac72a7ca12c553827ed81c116c949b5e07e93f90a85"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "supavisor",
+      "environment_keys": [
+        "API_JWT_SECRET",
+        "CLUSTER_POSTGRES",
+        "DATABASE_URL",
+        "DB_POOL_SIZE",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "POOLER_DEFAULT_POOL_SIZE",
+        "POOLER_MAX_CLIENT_CONN",
+        "POOLER_POOL_MODE",
+        "POOLER_TENANT_ID",
+        "PORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "REGION",
+        "RLIMIT_NOFILE",
+        "SECRET_KEY_BASE",
+        "VAULT_ENC_KEY"
+      ],
+      "image": "supabase/supavisor:2.9.5",
+      "image_id": "sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07",
+      "mounts": [
+        {
+          "destination": "/etc/pooler/pooler.exs",
+          "source": "~/Developer/quillium-supabase/volumes/pooler/pooler.exs",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "quillium-supabase-pooler",
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "5437"
+          }
+        ],
+        "6543/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "6547"
+          }
+        ]
+      },
+      "repo_digests": [
+        "supabase/supavisor@sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "rest",
+      "environment_keys": [
+        "PATH",
+        "PGRST_ADMIN_SERVER_HOST",
+        "PGRST_ADMIN_SERVER_PORT",
+        "PGRST_APP_SETTINGS_JWT_EXP",
+        "PGRST_APP_SETTINGS_JWT_SECRET",
+        "PGRST_DB_ANON_ROLE",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PGRST_DB_URI",
+        "PGRST_DB_USE_LEGACY_GUCS",
+        "PGRST_JWT_SECRET"
+      ],
+      "image": "local-security/quillium-supabase-rest:emudhra-8f9f4181707f",
+      "image_id": "sha256:5d328427ba12f4372303210b3b94642acc869e1f7876d5cf9cf23b0a22a049ac",
+      "mounts": [],
+      "name": "quillium-supabase-rest",
+      "ports": {},
+      "repo_digests": [
+        "local-security/quillium-supabase-rest@sha256:5d328427ba12f4372303210b3b94642acc869e1f7876d5cf9cf23b0a22a049ac"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "storage",
+      "environment_keys": [
+        "ANON_KEY",
+        "AUTH_JWT_SECRET",
+        "DATABASE_URL",
+        "ENABLE_IMAGE_TRANSFORMATION",
+        "FILE_SIZE_LIMIT",
+        "FILE_STORAGE_BACKEND_PATH",
+        "GLOBAL_S3_BUCKET",
+        "IMGPROXY_URL",
+        "JWT_JWKS",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "POSTGREST_URL",
+        "REGION",
+        "REQUEST_ALLOW_X_FORWARDED_PATH",
+        "S3_PROTOCOL_ACCESS_KEY_ID",
+        "S3_PROTOCOL_ACCESS_KEY_SECRET",
+        "SERVICE_KEY",
+        "STORAGE_BACKEND",
+        "STORAGE_PUBLIC_URL",
+        "TENANT_ID",
+        "VERSION",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/quillium-supabase-storage:emudhra-d4a11b8e7736",
+      "image_id": "sha256:c40480789dafe5857947fbf988c64c3d861ed74279373bf2644eb1cd1e600085",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/quillium-supabase/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "quillium-supabase-storage",
+      "ports": {},
+      "repo_digests": [
+        "local-security/quillium-supabase-storage@sha256:c40480789dafe5857947fbf988c64c3d861ed74279373bf2644eb1cd1e600085"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "studio",
+      "environment_keys": [
+        "AUTH_JWT_SECRET",
+        "DEFAULT_ORGANIZATION_NAME",
+        "DEFAULT_PROJECT_NAME",
+        "EDGE_FUNCTIONS_MANAGEMENT_FOLDER",
+        "ENABLED_FEATURES_LOGS_ALL",
+        "HOSTNAME",
+        "NODE_VERSION",
+        "OPENAI_API_KEY",
+        "PATH",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PG_META_CRYPTO_KEY",
+        "PNPM_HOME",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER_READ_WRITE",
+        "SNIPPETS_MANAGEMENT_FOLDER",
+        "STUDIO_PG_META_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY",
+        "SUPABASE_URL",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/quillium-supabase-studio:emudhra-0318f0b049d3",
+      "image_id": "sha256:8b553ac11096e387cec6f76dc4d651e568ffe4e314d51bf19542814bb344c4e2",
+      "mounts": [
+        {
+          "destination": "/app/edge-functions",
+          "source": "~/Developer/quillium-supabase/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/app/snippets",
+          "source": "~/Developer/quillium-supabase/volumes/snippets",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "quillium-supabase-studio",
+      "ports": {},
+      "repo_digests": [
+        "local-security/quillium-supabase-studio@sha256:8b553ac11096e387cec6f76dc4d651e568ffe4e314d51bf19542814bb344c4e2"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "billion-supabase-trial",
+      "compose_service": "realtime",
+      "environment_keys": [
+        "API_JWT_JWKS",
+        "API_JWT_SECRET",
+        "APP_NAME",
+        "DB_AFTER_CONNECT_QUERY",
+        "DB_ENC_KEY",
+        "DB_HOST",
+        "DB_NAME",
+        "DB_PASSWORD",
+        "DB_PORT",
+        "DB_USER",
+        "DISABLE_HEALTHCHECK_LOGGING",
+        "DNS_NODES",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "PORT",
+        "RLIMIT_NOFILE",
+        "RUN_JANITOR",
+        "SECRET_KEY_BASE",
+        "SEED_SELF_HOST",
+        "SLOT_NAME_SUFFIX"
+      ],
+      "image": "supabase/realtime:v2.143.3",
+      "image_id": "sha256:768b559241dd234c4e8852c5c0f504e598b80f1df2ad4dd78d5486fbed2f17a2",
+      "mounts": [],
+      "name": "realtime-dev.billion-trial-realtime",
+      "ports": {},
+      "repo_digests": [
+        "local-security/rollback-realtime-dev.billion-trial-realtime@sha256:768b559241dd234c4e8852c5c0f504e598b80f1df2ad4dd78d5486fbed2f17a2",
+        "supabase/realtime@sha256:768b559241dd234c4e8852c5c0f504e598b80f1df2ad4dd78d5486fbed2f17a2"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "church-retreat",
+      "compose_service": "realtime",
+      "environment_keys": [
+        "API_JWT_JWKS",
+        "API_JWT_SECRET",
+        "APP_NAME",
+        "DB_AFTER_CONNECT_QUERY",
+        "DB_ENC_KEY",
+        "DB_HOST",
+        "DB_NAME",
+        "DB_PASSWORD",
+        "DB_PORT",
+        "DB_USER",
+        "DISABLE_HEALTHCHECK_LOGGING",
+        "DNS_NODES",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "PORT",
+        "RLIMIT_NOFILE",
+        "RUN_JANITOR",
+        "SECRET_KEY_BASE",
+        "SEED_SELF_HOST",
+        "SLOT_NAME_SUFFIX"
+      ],
+      "image": "local-security/realtime-dev.church-retreat-realtime:emudhra-a354bf4b5b3c",
+      "image_id": "sha256:21c1c04cca338cbdb7dc6b5ec5a71273da2b18e3674ec499712d3278eb7702e3",
+      "mounts": [],
+      "name": "realtime-dev.church-retreat-realtime",
+      "ports": {},
+      "repo_digests": [
+        "local-security/realtime-dev.church-retreat-realtime@sha256:21c1c04cca338cbdb7dc6b5ec5a71273da2b18e3674ec499712d3278eb7702e3"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "grindion-supabase",
+      "compose_service": "realtime",
+      "environment_keys": [
+        "API_JWT_JWKS",
+        "API_JWT_SECRET",
+        "APP_NAME",
+        "DB_AFTER_CONNECT_QUERY",
+        "DB_ENC_KEY",
+        "DB_HOST",
+        "DB_NAME",
+        "DB_PASSWORD",
+        "DB_PORT",
+        "DB_USER",
+        "DISABLE_HEALTHCHECK_LOGGING",
+        "DNS_NODES",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "PORT",
+        "RLIMIT_NOFILE",
+        "RUN_JANITOR",
+        "SECRET_KEY_BASE",
+        "SEED_SELF_HOST",
+        "SLOT_NAME_SUFFIX"
+      ],
+      "image": "local-security/realtime-dev.grindion-supabase-realtime:emudhra-4cda0ad3852d",
+      "image_id": "sha256:73e754156ffe61a5df892f78d81bd4833fc20cc2cf2e5cff3899074633fbbf48",
+      "mounts": [],
+      "name": "realtime-dev.grindion-supabase-realtime",
+      "ports": {},
+      "repo_digests": [
+        "local-security/realtime-dev.grindion-supabase-realtime@sha256:73e754156ffe61a5df892f78d81bd4833fc20cc2cf2e5cff3899074633fbbf48"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "quillium-supabase",
+      "compose_service": "realtime",
+      "environment_keys": [
+        "API_JWT_JWKS",
+        "API_JWT_SECRET",
+        "APP_NAME",
+        "DB_AFTER_CONNECT_QUERY",
+        "DB_ENC_KEY",
+        "DB_HOST",
+        "DB_NAME",
+        "DB_PASSWORD",
+        "DB_PORT",
+        "DB_USER",
+        "DISABLE_HEALTHCHECK_LOGGING",
+        "DNS_NODES",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "PORT",
+        "RLIMIT_NOFILE",
+        "RUN_JANITOR",
+        "SECRET_KEY_BASE",
+        "SEED_SELF_HOST",
+        "SLOT_NAME_SUFFIX"
+      ],
+      "image": "local-security/realtime-dev.quillium-supabase-realtime:emudhra-195726007896",
+      "image_id": "sha256:6a9bf2ff4e339287fdd1e091a0ac3f09bc08c89fc3863c47db9e47fc4a4d0ce1",
+      "mounts": [],
+      "name": "realtime-dev.quillium-supabase-realtime",
+      "ports": {},
+      "repo_digests": [
+        "local-security/realtime-dev.quillium-supabase-realtime@sha256:6a9bf2ff4e339287fdd1e091a0ac3f09bc08c89fc3863c47db9e47fc4a4d0ce1"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "realtime",
+      "environment_keys": [
+        "API_JWT_JWKS",
+        "API_JWT_SECRET",
+        "APP_NAME",
+        "DB_AFTER_CONNECT_QUERY",
+        "DB_ENC_KEY",
+        "DB_HOST",
+        "DB_NAME",
+        "DB_PASSWORD",
+        "DB_PORT",
+        "DB_USER",
+        "DISABLE_HEALTHCHECK_LOGGING",
+        "DNS_NODES",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "PORT",
+        "RLIMIT_NOFILE",
+        "RUN_JANITOR",
+        "SECRET_KEY_BASE",
+        "SEED_SELF_HOST",
+        "SLOT_NAME_SUFFIX"
+      ],
+      "image": "local-security/realtime-dev.supabase-realtime:emudhra-a562f04fd396",
+      "image_id": "sha256:4a5e8f77f995159715e0ee016ac7124706ed19835de2fda703a19d4ded7165a5",
+      "mounts": [],
+      "name": "realtime-dev.supabase-realtime",
+      "ports": {},
+      "repo_digests": [
+        "local-security/realtime-dev.supabase-realtime@sha256:4a5e8f77f995159715e0ee016ac7124706ed19835de2fda703a19d4ded7165a5"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "realtime",
+      "environment_keys": [
+        "API_JWT_SECRET",
+        "APP_NAME",
+        "DB_AFTER_CONNECT_QUERY",
+        "DB_ENC_KEY",
+        "DB_HOST",
+        "DB_NAME",
+        "DB_PASSWORD",
+        "DB_PORT",
+        "DB_USER",
+        "DISABLE_HEALTHCHECK_LOGGING",
+        "DNS_NODES",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "PORT",
+        "RLIMIT_NOFILE",
+        "RUN_JANITOR",
+        "SECRET_KEY_BASE",
+        "SEED_SELF_HOST",
+        "SLOT_NAME_SUFFIX"
+      ],
+      "image": "local-security/realtime-dev.wuzursched-supabase-realtime:emudhra-50fce30e14bb",
+      "image_id": "sha256:5003b3cd0bf8a4606e664fc4b35b59f32efbb83505de83ba6c5205b0eec4a1e6",
+      "mounts": [],
+      "name": "realtime-dev.wuzursched-supabase-realtime",
+      "ports": {},
+      "repo_digests": [
+        "local-security/realtime-dev.wuzursched-supabase-realtime@sha256:5003b3cd0bf8a4606e664fc4b35b59f32efbb83505de83ba6c5205b0eec4a1e6"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "rustdesk-server",
+      "compose_service": "hbbr",
+      "environment_keys": [
+        "HOME",
+        "PATH"
+      ],
+      "image": "rustdesk/rustdesk-server:latest",
+      "image_id": "sha256:10818ec05b179039c6660f4d8e74b303f0db2858bbad2b18e24992ea22d54cd6",
+      "mounts": [
+        {
+          "destination": "/data",
+          "source": "~/rustdesk-server/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "rustdesk-hbbr",
+      "ports": {
+        "21117/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "21117"
+          }
+        ]
+      },
+      "repo_digests": [
+        "rustdesk/rustdesk-server@sha256:10818ec05b179039c6660f4d8e74b303f0db2858bbad2b18e24992ea22d54cd6"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "rustdesk-server",
+      "compose_service": "hbbs",
+      "environment_keys": [
+        "HOME",
+        "PATH"
+      ],
+      "image": "rustdesk/rustdesk-server:latest",
+      "image_id": "sha256:10818ec05b179039c6660f4d8e74b303f0db2858bbad2b18e24992ea22d54cd6",
+      "mounts": [
+        {
+          "destination": "/data",
+          "source": "~/rustdesk-server/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "rustdesk-hbbs",
+      "ports": {
+        "21115/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "21115"
+          }
+        ],
+        "21116/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "21116"
+          }
+        ],
+        "21116/udp": [
+          {
+            "HostIp": "",
+            "HostPort": "21116"
+          }
+        ]
+      },
+      "repo_digests": [
+        "rustdesk/rustdesk-server@sha256:10818ec05b179039c6660f4d8e74b303f0db2858bbad2b18e24992ea22d54cd6"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "searxng",
+      "compose_service": "searxng",
+      "environment_keys": [
+        "GRANIAN_BLOCKING_THREADS",
+        "GRANIAN_BLOCKING_THREADS_IDLE_TIMEOUT",
+        "GRANIAN_HOST",
+        "GRANIAN_INTERFACE",
+        "GRANIAN_PORT",
+        "GRANIAN_PROCESS_NAME",
+        "GRANIAN_WEBSOCKETS",
+        "GRANIAN_WORKERS_KILL_TIMEOUT",
+        "HISTFILE",
+        "PATH",
+        "SEARXNG_SECRET",
+        "SSL_CERT_DIR",
+        "SSL_CERT_FILE",
+        "__SEARXNG_CONFIG_PATH",
+        "__SEARXNG_DATA_PATH",
+        "__SEARXNG_SETTINGS_PATH",
+        "__SEARXNG_VERSION"
+      ],
+      "image": "local-security/searxng:emudhra-fdc0b0edb164",
+      "image_id": "sha256:a07d4cc8f4694dd7c46566ac184252e7c885afd5440b413ec8ee8818fc956427",
+      "mounts": [
+        {
+          "destination": "/etc/searxng",
+          "source": "/var/lib/docker/volumes/d896d8b02bc201c6c10f6d683d8c059a57b872a3f90565496545084ba015a8cb/_data",
+          "type": "volume",
+          "volume": "d896d8b02bc201c6c10f6d683d8c059a57b872a3f90565496545084ba015a8cb",
+          "writable": true
+        },
+        {
+          "destination": "/etc/searxng/settings.yml",
+          "source": "~/.config/billion/searxng/settings.yml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/var/cache/searxng",
+          "source": "/var/lib/docker/volumes/0b5d98bfc6657c5b3f353d9b03f2198b4d512aaadbf256b89cefff22de5fc72d/_data",
+          "type": "volume",
+          "volume": "0b5d98bfc6657c5b3f353d9b03f2198b4d512aaadbf256b89cefff22de5fc72d",
+          "writable": true
+        }
+      ],
+      "name": "searxng-searxng-1",
+      "ports": {
+        "8080/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8888"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/searxng@sha256:a07d4cc8f4694dd7c46566ac184252e7c885afd5440b413ec8ee8818fc956427"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "auth",
+      "environment_keys": [
+        "API_EXTERNAL_URL",
+        "GOTRUE_API_HOST",
+        "GOTRUE_API_PORT",
+        "GOTRUE_DB_DATABASE_URL",
+        "GOTRUE_DB_DRIVER",
+        "GOTRUE_DB_MIGRATIONS_PATH",
+        "GOTRUE_DISABLE_SIGNUP",
+        "GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED",
+        "GOTRUE_EXTERNAL_EMAIL_ENABLED",
+        "GOTRUE_EXTERNAL_PHONE_ENABLED",
+        "GOTRUE_JWT_ADMIN_ROLES",
+        "GOTRUE_JWT_AUD",
+        "GOTRUE_JWT_DEFAULT_GROUP_NAME",
+        "GOTRUE_JWT_EXP",
+        "GOTRUE_JWT_ISSUER",
+        "GOTRUE_JWT_KEYS",
+        "GOTRUE_JWT_SECRET",
+        "GOTRUE_MAILER_AUTOCONFIRM",
+        "GOTRUE_MAILER_URLPATHS_CONFIRMATION",
+        "GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE",
+        "GOTRUE_MAILER_URLPATHS_INVITE",
+        "GOTRUE_MAILER_URLPATHS_RECOVERY",
+        "GOTRUE_SITE_URL",
+        "GOTRUE_SMS_AUTOCONFIRM",
+        "GOTRUE_SMTP_ADMIN_EMAIL",
+        "GOTRUE_SMTP_HOST",
+        "GOTRUE_SMTP_PASS",
+        "GOTRUE_SMTP_PORT",
+        "GOTRUE_SMTP_SENDER_NAME",
+        "GOTRUE_SMTP_USER",
+        "GOTRUE_URI_ALLOW_LIST",
+        "PATH"
+      ],
+      "image": "local-security/supabase-auth:emudhra-edce6657c074",
+      "image_id": "sha256:8e02963f91291bb6430e8670e7e73fffac79c38056df9ea5a29c33cd8b43fa3e",
+      "mounts": [],
+      "name": "supabase-auth",
+      "ports": {},
+      "repo_digests": [
+        "local-security/supabase-auth@sha256:8e02963f91291bb6430e8670e7e73fffac79c38056df9ea5a29c33cd8b43fa3e"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "db",
+      "environment_keys": [
+        "JWT_EXP",
+        "JWT_SECRET",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "LC_COLLATE",
+        "LC_CTYPE",
+        "LOCALE_ARCHIVE",
+        "PATH",
+        "PGDATA",
+        "PGDATABASE",
+        "PGPASSWORD",
+        "PGPORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER"
+      ],
+      "image": "supabase/postgres:15.8.1.085",
+      "image_id": "sha256:af083ef64d0408c8f098ee6f5c364a59b26f36fbc0f3a334a62c5c1d57362e9b",
+      "mounts": [
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
+          "source": "~/Developer/supabase/docker/volumes/db/roles.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-pooler.sql",
+          "source": "~/Developer/supabase/docker/volumes/db/pooler.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "~/Developer/supabase/docker/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
+          "source": "~/Developer/supabase/docker/volumes/db/jwt.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
+          "source": "~/Developer/supabase/docker/volumes/db/_supabase.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-logs.sql",
+          "source": "~/Developer/supabase/docker/volumes/db/logs.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-realtime.sql",
+          "source": "~/Developer/supabase/docker/volumes/db/realtime.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/etc/postgresql-custom",
+          "source": "/var/lib/docker/volumes/supabase_db-config/_data",
+          "type": "volume",
+          "volume": "supabase_db-config",
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
+          "source": "~/Developer/supabase/docker/volumes/db/webhooks.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "supabase-db",
+      "ports": {},
+      "repo_digests": [
+        "supabase/postgres@sha256:af083ef64d0408c8f098ee6f5c364a59b26f36fbc0f3a334a62c5c1d57362e9b"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "functions",
+      "environment_keys": [
+        "DENO_TLS_CA_STORE",
+        "JWT_SECRET",
+        "PATH",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_DB_URL",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEYS",
+        "SUPABASE_SECRET_KEYS",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "SUPABASE_URL",
+        "VERIFY_JWT"
+      ],
+      "image": "local-security/supabase-edge-functions:emudhra-98a5433d0ebb",
+      "image_id": "sha256:bb948acc46a786616198e024ebd328e9f35bcccebabc435083c703901c6c1405",
+      "mounts": [
+        {
+          "destination": "/home/deno/functions",
+          "source": "~/Developer/supabase/docker/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/root/.cache/deno",
+          "source": "/var/lib/docker/volumes/supabase_deno-cache/_data",
+          "type": "volume",
+          "volume": "supabase_deno-cache",
+          "writable": true
+        }
+      ],
+      "name": "supabase-edge-functions",
+      "ports": {},
+      "repo_digests": [
+        "local-security/supabase-edge-functions@sha256:bb948acc46a786616198e024ebd328e9f35bcccebabc435083c703901c6c1405"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "imgproxy",
+      "environment_keys": [
+        "AWS_LWA_ASYNC_INIT",
+        "AWS_LWA_INVOKE_MODE",
+        "AWS_LWA_READINESS_CHECK_PATH",
+        "FONTCONFIG_PATH",
+        "IMGPROXY_AUTO_WEBP",
+        "IMGPROXY_BIND",
+        "IMGPROXY_LOCAL_FILESYSTEM_ROOT",
+        "IMGPROXY_MALLOC",
+        "IMGPROXY_MAX_SRC_RESOLUTION",
+        "IMGPROXY_USE_ETAG",
+        "MALLOC_ARENA_MAX",
+        "PATH",
+        "VIPS_VECTOR",
+        "VIPS_WARNING"
+      ],
+      "image": "local-security/supabase-imgproxy:emudhra-6902b79f235b",
+      "image_id": "sha256:91bea87fdf0a91c39f1302e0a810ae84a218772207b81d73615b2656487c3a66",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/supabase/docker/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "supabase-imgproxy",
+      "ports": {},
+      "repo_digests": [
+        "local-security/supabase-imgproxy@sha256:91bea87fdf0a91c39f1302e0a810ae84a218772207b81d73615b2656487c3a66"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "kong",
+      "environment_keys": [
+        "ANON_KEY_ASYMMETRIC",
+        "DASHBOARD_PASSWORD",
+        "DASHBOARD_USERNAME",
+        "KONG_DATABASE",
+        "KONG_DECLARATIVE_CONFIG",
+        "KONG_DNS_NOT_FOUND_TTL",
+        "KONG_DNS_ORDER",
+        "KONG_NGINX_PROXY_PROXY_BUFFERS",
+        "KONG_NGINX_PROXY_PROXY_BUFFER_SIZE",
+        "KONG_PLUGINS",
+        "KONG_PREFIX",
+        "KONG_PROXY_ACCESS_LOG",
+        "KONG_VERSION",
+        "PATH",
+        "SERVICE_ROLE_KEY_ASYMMETRIC",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY"
+      ],
+      "image": "local-security/supabase-kong:emudhra-5eb60c0821af",
+      "image_id": "sha256:42f3b685529ed0b5251e96e4fa84ecc7a0b198d89f8bae1db3326eb99acd40e9",
+      "mounts": [
+        {
+          "destination": "/home/kong/temp.yml",
+          "source": "~/Developer/supabase/docker/volumes/api/kong.yml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/home/kong/kong-entrypoint.sh",
+          "source": "~/Developer/supabase/docker/volumes/api/kong-entrypoint.sh",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "supabase-kong",
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "8000"
+          }
+        ],
+        "8443/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "8443"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/supabase-kong@sha256:42f3b685529ed0b5251e96e4fa84ecc7a0b198d89f8bae1db3326eb99acd40e9"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "meta",
+      "environment_keys": [
+        "CRYPTO_KEY",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "PG_META_DB_HOST",
+        "PG_META_DB_NAME",
+        "PG_META_DB_PASSWORD",
+        "PG_META_DB_PORT",
+        "PG_META_DB_USER",
+        "PG_META_PORT",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/supabase-meta:emudhra-aa6a035c01a3",
+      "image_id": "sha256:77b8ab9d5b49266b1d5aee20b1421448f030de2a93afee9357ccf5562de45afa",
+      "mounts": [],
+      "name": "supabase-meta",
+      "ports": {},
+      "repo_digests": [
+        "local-security/supabase-meta@sha256:77b8ab9d5b49266b1d5aee20b1421448f030de2a93afee9357ccf5562de45afa"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "supavisor",
+      "environment_keys": [
+        "API_JWT_SECRET",
+        "CLUSTER_POSTGRES",
+        "DATABASE_URL",
+        "DB_POOL_SIZE",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "POOLER_DEFAULT_POOL_SIZE",
+        "POOLER_MAX_CLIENT_CONN",
+        "POOLER_POOL_MODE",
+        "POOLER_TENANT_ID",
+        "PORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "REGION",
+        "RLIMIT_NOFILE",
+        "SECRET_KEY_BASE",
+        "VAULT_ENC_KEY"
+      ],
+      "image": "supabase/supavisor:2.9.5",
+      "image_id": "sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07",
+      "mounts": [
+        {
+          "destination": "/etc/pooler/pooler.exs",
+          "source": "~/Developer/supabase/docker/volumes/pooler/pooler.exs",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "supabase-pooler",
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "5432"
+          }
+        ],
+        "6543/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "6543"
+          }
+        ]
+      },
+      "repo_digests": [
+        "supabase/supavisor@sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "rest",
+      "environment_keys": [
+        "PATH",
+        "PGRST_APP_SETTINGS_JWT_EXP",
+        "PGRST_APP_SETTINGS_JWT_SECRET",
+        "PGRST_DB_ANON_ROLE",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PGRST_DB_URI",
+        "PGRST_DB_USE_LEGACY_GUCS",
+        "PGRST_JWT_SECRET"
+      ],
+      "image": "local-security/supabase-rest:emudhra-0069122d75ce",
+      "image_id": "sha256:4e474ef9925858645010321ac186669eab25f1fe708c3bf80f556393ccf344c0",
+      "mounts": [],
+      "name": "supabase-rest",
+      "ports": {},
+      "repo_digests": [
+        "local-security/supabase-rest@sha256:4e474ef9925858645010321ac186669eab25f1fe708c3bf80f556393ccf344c0"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "storage",
+      "environment_keys": [
+        "ANON_KEY",
+        "AUTH_JWT_SECRET",
+        "DATABASE_URL",
+        "ENABLE_IMAGE_TRANSFORMATION",
+        "FILE_SIZE_LIMIT",
+        "FILE_STORAGE_BACKEND_PATH",
+        "GLOBAL_S3_BUCKET",
+        "IMGPROXY_URL",
+        "JWT_JWKS",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "POSTGREST_URL",
+        "REGION",
+        "REQUEST_ALLOW_X_FORWARDED_PATH",
+        "S3_PROTOCOL_ACCESS_KEY_ID",
+        "S3_PROTOCOL_ACCESS_KEY_SECRET",
+        "SERVICE_KEY",
+        "STORAGE_BACKEND",
+        "STORAGE_PUBLIC_URL",
+        "TENANT_ID",
+        "VERSION",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/supabase-storage:emudhra-6c232ba9cbeb",
+      "image_id": "sha256:b147d5cba1ecd1d72aca7dafb3d1354ad3300e0fd89bc2362a953c99e93117f0",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/supabase/docker/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "supabase-storage",
+      "ports": {},
+      "repo_digests": [
+        "local-security/supabase-storage@sha256:b147d5cba1ecd1d72aca7dafb3d1354ad3300e0fd89bc2362a953c99e93117f0"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "supabase",
+      "compose_service": "studio",
+      "environment_keys": [
+        "AUTH_JWT_SECRET",
+        "DEFAULT_ORGANIZATION_NAME",
+        "DEFAULT_PROJECT_NAME",
+        "EDGE_FUNCTIONS_MANAGEMENT_FOLDER",
+        "ENABLED_FEATURES_LOGS_ALL",
+        "HOSTNAME",
+        "NODE_VERSION",
+        "OPENAI_API_KEY",
+        "PATH",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PG_META_CRYPTO_KEY",
+        "PNPM_HOME",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "SNIPPETS_MANAGEMENT_FOLDER",
+        "STUDIO_PG_META_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY",
+        "SUPABASE_URL",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/supabase-studio:emudhra-194fb89b0e5a",
+      "image_id": "sha256:dc9788e30b4d6110708b93fa78809141d0d085a516ac80a02bcdd0d9a039c91a",
+      "mounts": [
+        {
+          "destination": "/app/edge-functions",
+          "source": "~/Developer/supabase/docker/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/app/snippets",
+          "source": "~/Developer/supabase/docker/volumes/snippets",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "supabase-studio",
+      "ports": {},
+      "repo_digests": [
+        "local-security/supabase-studio@sha256:dc9788e30b4d6110708b93fa78809141d0d085a516ac80a02bcdd0d9a039c91a"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "terminus",
+      "compose_service": "database",
+      "environment_keys": [
+        "DOCKER_PG_LLVM_DEPS",
+        "GOSU_VERSION",
+        "LANG",
+        "PATH",
+        "PGDATA",
+        "PG_MAJOR",
+        "PG_SHA256",
+        "PG_VERSION",
+        "POSTGRES_DB",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_USER"
+      ],
+      "image": "postgres:18.4-alpine",
+      "image_id": "sha256:96d56f7f57c6aacd1fcb908bc83b345ec5f83231ee486dd66a1baadce274db88",
+      "mounts": [
+        {
+          "destination": "/var/lib/postgresql",
+          "source": "/var/lib/docker/volumes/terminus_database-data/_data",
+          "type": "volume",
+          "volume": "terminus_database-data",
+          "writable": true
+        }
+      ],
+      "name": "terminus-database-1",
+      "ports": {},
+      "repo_digests": [
+        "postgres@sha256:96d56f7f57c6aacd1fcb908bc83b345ec5f83231ee486dd66a1baadce274db88"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "terminus",
+      "compose_service": "init-certificates",
+      "environment_keys": [
+        "BUNDLE_APP_CONFIG",
+        "BUNDLE_DEPLOYMENT",
+        "BUNDLE_PATH",
+        "BUNDLE_SILENCE_ROOT_WARNING",
+        "BUNDLE_WITHOUT",
+        "CERTIFICATE_URLS",
+        "GEM_HOME",
+        "HANAMI_ENV",
+        "HANAMI_SERVE_ASSETS",
+        "LANG",
+        "PATH",
+        "RACK_ENV",
+        "RUBY_DOWNLOAD_SHA256",
+        "RUBY_DOWNLOAD_URL",
+        "RUBY_VERSION"
+      ],
+      "image": "ghcr.io/usetrmnl/terminus:latest",
+      "image_id": "sha256:9d52e8d2201d38ee4f511e983b3be78bd429fb2a8854835d00957cf35f4813c0",
+      "mounts": [
+        {
+          "destination": "/etc/ssl/certs",
+          "source": "/var/lib/docker/volumes/terminus_certificates/_data",
+          "type": "volume",
+          "volume": "terminus_certificates",
+          "writable": true
+        }
+      ],
+      "name": "terminus-init-certificates-1",
+      "ports": {},
+      "repo_digests": [
+        "local-security/rollback-terminus-init-certificates-1@sha256:9d52e8d2201d38ee4f511e983b3be78bd429fb2a8854835d00957cf35f4813c0",
+        "local-security/rollback-terminus-web-1@sha256:9d52e8d2201d38ee4f511e983b3be78bd429fb2a8854835d00957cf35f4813c0",
+        "local-security/rollback-terminus-worker-1@sha256:9d52e8d2201d38ee4f511e983b3be78bd429fb2a8854835d00957cf35f4813c0",
+        "ghcr.io/usetrmnl/terminus@sha256:9d52e8d2201d38ee4f511e983b3be78bd429fb2a8854835d00957cf35f4813c0"
+      ],
+      "restart": "no",
+      "state": "exited"
+    },
+    {
+      "compose_project": "terminus",
+      "compose_service": "keyvalue",
+      "environment_keys": [
+        "PATH",
+        "VALKEY_VERSION"
+      ],
+      "image": "valkey/valkey:9-alpine",
+      "image_id": "sha256:a35428eba9043cc0b79dbe54100f0c92784f2de00ad09b01182bfb1c5c83d1bd",
+      "mounts": [
+        {
+          "destination": "/data",
+          "source": "/var/lib/docker/volumes/terminus_keyvalue-data/_data",
+          "type": "volume",
+          "volume": "terminus_keyvalue-data",
+          "writable": true
+        }
+      ],
+      "name": "terminus-keyvalue-1",
+      "ports": {},
+      "repo_digests": [
+        "valkey/valkey@sha256:a35428eba9043cc0b79dbe54100f0c92784f2de00ad09b01182bfb1c5c83d1bd"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "terminus",
+      "compose_service": "web",
+      "environment_keys": [
+        "API_URI",
+        "APP_SECRET",
+        "APP_SETUP",
+        "BUNDLE_APP_CONFIG",
+        "BUNDLE_DEPLOYMENT",
+        "BUNDLE_PATH",
+        "BUNDLE_SILENCE_ROOT_WARNING",
+        "BUNDLE_WITHOUT",
+        "DATABASE_URL",
+        "GEM_HOME",
+        "HANAMI_ENV",
+        "HANAMI_PORT",
+        "HANAMI_SERVE_ASSETS",
+        "KEYVALUE_URL",
+        "LANG",
+        "PATH",
+        "RACK_ENV",
+        "RUBY_DOWNLOAD_SHA256",
+        "RUBY_DOWNLOAD_URL",
+        "RUBY_VERSION"
+      ],
+      "image": "local-security/terminus-web-1:emudhra-ac76ee02d91b",
+      "image_id": "sha256:9aae3c55c84f33d8017e5f656cbfd888fe88027229f7768c3622998bba650e2b",
+      "mounts": [
+        {
+          "destination": "/app/public/uploads",
+          "source": "/var/lib/docker/volumes/terminus_web-uploads/_data",
+          "type": "volume",
+          "volume": "terminus_web-uploads",
+          "writable": true
+        },
+        {
+          "destination": "/etc/ssl/certs",
+          "source": "/var/lib/docker/volumes/terminus_certificates/_data",
+          "type": "volume",
+          "volume": "terminus_certificates",
+          "writable": true
+        }
+      ],
+      "name": "terminus-web-1",
+      "ports": {
+        "2300/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "2300"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/terminus-web-1@sha256:9aae3c55c84f33d8017e5f656cbfd888fe88027229f7768c3622998bba650e2b"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "terminus",
+      "compose_service": "worker",
+      "environment_keys": [
+        "API_URI",
+        "APP_SECRET",
+        "BUNDLE_APP_CONFIG",
+        "BUNDLE_DEPLOYMENT",
+        "BUNDLE_PATH",
+        "BUNDLE_SILENCE_ROOT_WARNING",
+        "BUNDLE_WITHOUT",
+        "DATABASE_URL",
+        "GEM_HOME",
+        "HANAMI_ENV",
+        "HANAMI_PORT",
+        "HANAMI_SERVE_ASSETS",
+        "KEYVALUE_URL",
+        "LANG",
+        "PATH",
+        "RACK_ENV",
+        "RUBY_DOWNLOAD_SHA256",
+        "RUBY_DOWNLOAD_URL",
+        "RUBY_VERSION"
+      ],
+      "image": "local-security/terminus-worker-1:emudhra-be843835754b",
+      "image_id": "sha256:d1b31a331b2266e020e641072af2026fa9ae2bc09840a3fcd5d058a2b671cff2",
+      "mounts": [
+        {
+          "destination": "/app/public/uploads",
+          "source": "/var/lib/docker/volumes/terminus_web-uploads/_data",
+          "type": "volume",
+          "volume": "terminus_web-uploads",
+          "writable": true
+        },
+        {
+          "destination": "/etc/ssl/certs",
+          "source": "/var/lib/docker/volumes/terminus_certificates/_data",
+          "type": "volume",
+          "volume": "terminus_certificates",
+          "writable": true
+        }
+      ],
+      "name": "terminus-worker-1",
+      "ports": {},
+      "repo_digests": [
+        "local-security/terminus-worker-1@sha256:d1b31a331b2266e020e641072af2026fa9ae2bc09840a3fcd5d058a2b671cff2"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "umami-selfhost",
+      "compose_service": "db",
+      "environment_keys": [
+        "DOCKER_PG_LLVM_DEPS",
+        "GOSU_VERSION",
+        "LANG",
+        "PATH",
+        "PGDATA",
+        "PG_MAJOR",
+        "PG_SHA256",
+        "PG_VERSION",
+        "POSTGRES_DB",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_USER",
+        "TZ"
+      ],
+      "image": "postgres:15-alpine",
+      "image_id": "sha256:cd17e2ac98240fce1541ad2a803b34009b4eea5aec8a832363cdc7eca62e722e",
+      "mounts": [
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "/var/lib/docker/volumes/umami-selfhost_db-data/_data",
+          "type": "volume",
+          "volume": "umami-selfhost_db-data",
+          "writable": true
+        }
+      ],
+      "name": "umami-selfhost-db-1",
+      "ports": {},
+      "repo_digests": [
+        "postgres@sha256:cd17e2ac98240fce1541ad2a803b34009b4eea5aec8a832363cdc7eca62e722e"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "umami-selfhost",
+      "compose_service": "umami",
+      "environment_keys": [
+        "APP_SECRET",
+        "DATABASE_URL",
+        "DISABLE_TELEMETRY",
+        "HOSTNAME",
+        "NEXT_TELEMETRY_DISABLED",
+        "NODE_ENV",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "PORT",
+        "TWO_FACTOR_ENCRYPTION_KEY",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/umami-selfhost-umami-1:emudhra-cf3f997d927b",
+      "image_id": "sha256:0b9fcb160e08065b6a21ea9f55cf24eb88ca42673b932961a9802a598f0a6c42",
+      "mounts": [],
+      "name": "umami-selfhost-umami-1",
+      "ports": {
+        "3000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "3005"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/umami-selfhost-umami-1@sha256:0b9fcb160e08065b6a21ea9f55cf24eb88ca42673b932961a9802a598f0a6c42"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "unblock",
+      "compose_service": "ladder",
+      "environment_keys": [
+        "EXPOSE_RULESET",
+        "LOG_URLS",
+        "NOLOGS",
+        "PATH",
+        "PORT",
+        "RULESET",
+        "SSL_CERT_FILE",
+        "USERPASS"
+      ],
+      "image": "ghcr.io/everywall/ladder@sha256:cf30c32ac046a5554a4e829f46546d68ed6056986ba5ba83c65a5a705828d5fe",
+      "image_id": "sha256:cf30c32ac046a5554a4e829f46546d68ed6056986ba5ba83c65a5a705828d5fe",
+      "mounts": [],
+      "name": "unblock-ladder-1",
+      "ports": {
+        "8080/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8093"
+          }
+        ]
+      },
+      "repo_digests": [
+        "ghcr.io/everywall/ladder@sha256:cf30c32ac046a5554a4e829f46546d68ed6056986ba5ba83c65a5a705828d5fe"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "auth",
+      "environment_keys": [
+        "API_EXTERNAL_URL",
+        "GOTRUE_API_HOST",
+        "GOTRUE_API_PORT",
+        "GOTRUE_DB_DATABASE_URL",
+        "GOTRUE_DB_DRIVER",
+        "GOTRUE_DB_MIGRATIONS_PATH",
+        "GOTRUE_DISABLE_SIGNUP",
+        "GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED",
+        "GOTRUE_EXTERNAL_EMAIL_ENABLED",
+        "GOTRUE_EXTERNAL_PHONE_ENABLED",
+        "GOTRUE_JWT_ADMIN_ROLES",
+        "GOTRUE_JWT_AUD",
+        "GOTRUE_JWT_DEFAULT_GROUP_NAME",
+        "GOTRUE_JWT_EXP",
+        "GOTRUE_JWT_ISSUER",
+        "GOTRUE_JWT_SECRET",
+        "GOTRUE_MAILER_AUTOCONFIRM",
+        "GOTRUE_MAILER_URLPATHS_CONFIRMATION",
+        "GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE",
+        "GOTRUE_MAILER_URLPATHS_INVITE",
+        "GOTRUE_MAILER_URLPATHS_RECOVERY",
+        "GOTRUE_SITE_URL",
+        "GOTRUE_SMS_AUTOCONFIRM",
+        "GOTRUE_SMTP_ADMIN_EMAIL",
+        "GOTRUE_SMTP_HOST",
+        "GOTRUE_SMTP_PASS",
+        "GOTRUE_SMTP_PORT",
+        "GOTRUE_SMTP_SENDER_NAME",
+        "GOTRUE_SMTP_USER",
+        "GOTRUE_URI_ALLOW_LIST",
+        "PATH"
+      ],
+      "image": "local-security/wuzursched-supabase-auth:emudhra-ad2eafe8d71a",
+      "image_id": "sha256:ced14965f1d21bbec7f307170b1e7da31bfa4ecc04ad5736f310ec70479626a6",
+      "mounts": [],
+      "name": "wuzursched-supabase-auth",
+      "ports": {},
+      "repo_digests": [
+        "local-security/wuzursched-supabase-auth@sha256:ced14965f1d21bbec7f307170b1e7da31bfa4ecc04ad5736f310ec70479626a6"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "db",
+      "environment_keys": [
+        "GRN_PLUGINS_DIR",
+        "JWT_EXP",
+        "JWT_SECRET",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "LOCALE_ARCHIVE",
+        "PATH",
+        "PGDATA",
+        "PGDATABASE",
+        "PGPASSWORD",
+        "PGPORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_INITDB_ARGS",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER"
+      ],
+      "image": "supabase/postgres:17.6.1.136",
+      "image_id": "sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00",
+      "mounts": [
+        {
+          "destination": "/etc/postgresql-custom",
+          "source": "/var/lib/docker/volumes/wuzursched-supabase_db-config/_data",
+          "type": "volume",
+          "volume": "wuzursched-supabase_db-config",
+          "writable": true
+        },
+        {
+          "destination": "/var/lib/postgresql/data",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/data",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/97-_supabase.sql",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/_supabase.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-logs.sql",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/logs.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-pooler.sql",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/pooler.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/migrations/99-realtime.sql",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/realtime.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/98-webhooks.sql",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/webhooks.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-jwt.sql",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/jwt.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/docker-entrypoint-initdb.d/init-scripts/99-roles.sql",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/db/roles.sql",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "wuzursched-supabase-db",
+      "ports": {},
+      "repo_digests": [
+        "supabase/postgres@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "functions",
+      "environment_keys": [
+        "DENO_TLS_CA_STORE",
+        "JWT_SECRET",
+        "PATH",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_DB_URL",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEYS",
+        "SUPABASE_SECRET_KEYS",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "SUPABASE_URL",
+        "VERIFY_JWT"
+      ],
+      "image": "local-security/wuzursched-supabase-edge-functions:emudhra-6d47f07bac5d",
+      "image_id": "sha256:169cd7c579368a843632acffba988fab8c9f71d23d6a59a82ef59cd43627ed6f",
+      "mounts": [
+        {
+          "destination": "/home/deno/functions",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        },
+        {
+          "destination": "/root/.cache/deno",
+          "source": "/var/lib/docker/volumes/wuzursched-supabase_deno-cache/_data",
+          "type": "volume",
+          "volume": "wuzursched-supabase_deno-cache",
+          "writable": true
+        }
+      ],
+      "name": "wuzursched-supabase-edge-functions",
+      "ports": {},
+      "repo_digests": [
+        "local-security/wuzursched-supabase-edge-functions@sha256:169cd7c579368a843632acffba988fab8c9f71d23d6a59a82ef59cd43627ed6f"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "imgproxy",
+      "environment_keys": [
+        "AWS_LWA_ASYNC_INIT",
+        "AWS_LWA_INVOKE_MODE",
+        "AWS_LWA_READINESS_CHECK_PATH",
+        "FONTCONFIG_PATH",
+        "IMGPROXY_AUTO_WEBP",
+        "IMGPROXY_BIND",
+        "IMGPROXY_LOCAL_FILESYSTEM_ROOT",
+        "IMGPROXY_MALLOC",
+        "IMGPROXY_MAX_SRC_RESOLUTION",
+        "IMGPROXY_USE_ETAG",
+        "MALLOC_ARENA_MAX",
+        "PATH",
+        "VIPS_VECTOR",
+        "VIPS_WARNING"
+      ],
+      "image": "local-security/wuzursched-supabase-imgproxy:emudhra-e96618533fc1",
+      "image_id": "sha256:1af27aff5b6b4d86e6dd081c6508b68ce0206b6385bd9d4cc8c533c021755f74",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "wuzursched-supabase-imgproxy",
+      "ports": {},
+      "repo_digests": [
+        "local-security/wuzursched-supabase-imgproxy@sha256:1af27aff5b6b4d86e6dd081c6508b68ce0206b6385bd9d4cc8c533c021755f74"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "kong",
+      "environment_keys": [
+        "ANON_KEY_ASYMMETRIC",
+        "DASHBOARD_PASSWORD",
+        "DASHBOARD_USERNAME",
+        "KONG_DATABASE",
+        "KONG_DECLARATIVE_CONFIG",
+        "KONG_DNS_NOT_FOUND_TTL",
+        "KONG_DNS_ORDER",
+        "KONG_NGINX_PROXY_PROXY_BUFFERS",
+        "KONG_NGINX_PROXY_PROXY_BUFFER_SIZE",
+        "KONG_PLUGINS",
+        "KONG_PREFIX",
+        "KONG_PROXY_ACCESS_LOG",
+        "KONG_ROUTER_FLAVOR",
+        "KONG_VERSION",
+        "PATH",
+        "SERVICE_ROLE_KEY_ASYMMETRIC",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY"
+      ],
+      "image": "local-security/wuzursched-supabase-kong:emudhra-492d459952b0",
+      "image_id": "sha256:ae46ac271993c7b1094159f90801168cf8e986044467f731f785fea7998885f9",
+      "mounts": [
+        {
+          "destination": "/home/kong/kong-entrypoint.sh",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/api/kong-entrypoint.sh",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/home/kong/temp.yml",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/api/kong.yml",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "wuzursched-supabase-kong",
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8003"
+          }
+        ],
+        "8443/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "9445"
+          }
+        ]
+      },
+      "repo_digests": [
+        "local-security/wuzursched-supabase-kong@sha256:ae46ac271993c7b1094159f90801168cf8e986044467f731f785fea7998885f9"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "meta",
+      "environment_keys": [
+        "CRYPTO_KEY",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "PG_META_DB_HOST",
+        "PG_META_DB_NAME",
+        "PG_META_DB_PASSWORD",
+        "PG_META_DB_PORT",
+        "PG_META_DB_USER",
+        "PG_META_PORT",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/wuzursched-supabase-meta:emudhra-4f6f613eaaac",
+      "image_id": "sha256:94c8feb7ad08e9a6e5fffd7581bf756891a53c72342a088732129321742d9ab4",
+      "mounts": [],
+      "name": "wuzursched-supabase-meta",
+      "ports": {},
+      "repo_digests": [
+        "local-security/wuzursched-supabase-meta@sha256:94c8feb7ad08e9a6e5fffd7581bf756891a53c72342a088732129321742d9ab4"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "supavisor",
+      "environment_keys": [
+        "API_JWT_SECRET",
+        "CLUSTER_POSTGRES",
+        "DATABASE_URL",
+        "DB_POOL_SIZE",
+        "ECTO_IPV6",
+        "ERL_AFLAGS",
+        "LANG",
+        "LANGUAGE",
+        "LC_ALL",
+        "METRICS_JWT_SECRET",
+        "MIX_ENV",
+        "PATH",
+        "POOLER_DEFAULT_POOL_SIZE",
+        "POOLER_MAX_CLIENT_CONN",
+        "POOLER_POOL_MODE",
+        "POOLER_TENANT_ID",
+        "PORT",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "REGION",
+        "RLIMIT_NOFILE",
+        "SECRET_KEY_BASE",
+        "VAULT_ENC_KEY"
+      ],
+      "image": "supabase/supavisor:2.9.5",
+      "image_id": "sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07",
+      "mounts": [
+        {
+          "destination": "/etc/pooler/pooler.exs",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/pooler/pooler.exs",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        }
+      ],
+      "name": "wuzursched-supabase-pooler",
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "5436"
+          }
+        ],
+        "6543/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "6546"
+          }
+        ]
+      },
+      "repo_digests": [
+        "supabase/supavisor@sha256:31c2f05b13b11069660fdfae2f6cfd37b509748d2710aca121cfee8b16cb8b07"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "rest",
+      "environment_keys": [
+        "PATH",
+        "PGRST_ADMIN_SERVER_HOST",
+        "PGRST_ADMIN_SERVER_PORT",
+        "PGRST_APP_SETTINGS_JWT_EXP",
+        "PGRST_APP_SETTINGS_JWT_SECRET",
+        "PGRST_DB_ANON_ROLE",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PGRST_DB_URI",
+        "PGRST_DB_USE_LEGACY_GUCS",
+        "PGRST_JWT_SECRET"
+      ],
+      "image": "local-security/wuzursched-supabase-rest:emudhra-297ae1198382",
+      "image_id": "sha256:44126224a9d45927e4f3acc243a9d38d7da9df3c5790b4bb4bcfeab2c0c9d4ea",
+      "mounts": [],
+      "name": "wuzursched-supabase-rest",
+      "ports": {},
+      "repo_digests": [
+        "local-security/wuzursched-supabase-rest@sha256:44126224a9d45927e4f3acc243a9d38d7da9df3c5790b4bb4bcfeab2c0c9d4ea"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "storage",
+      "environment_keys": [
+        "ANON_KEY",
+        "AUTH_JWT_SECRET",
+        "DATABASE_URL",
+        "ENABLE_IMAGE_TRANSFORMATION",
+        "FILE_SIZE_LIMIT",
+        "FILE_STORAGE_BACKEND_PATH",
+        "GLOBAL_S3_BUCKET",
+        "IMGPROXY_URL",
+        "NODE_OPTIONS",
+        "NODE_VERSION",
+        "PATH",
+        "POSTGREST_URL",
+        "REGION",
+        "REQUEST_ALLOW_X_FORWARDED_PATH",
+        "S3_PROTOCOL_ACCESS_KEY_ID",
+        "S3_PROTOCOL_ACCESS_KEY_SECRET",
+        "SERVICE_KEY",
+        "STORAGE_BACKEND",
+        "STORAGE_PUBLIC_URL",
+        "TENANT_ID",
+        "VERSION",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/wuzursched-supabase-storage:emudhra-37ff2123d849",
+      "image_id": "sha256:06cf297458da107e8c7131830fcaddde8ecab284a8d5b2cd0321488f9f470edd",
+      "mounts": [
+        {
+          "destination": "/var/lib/storage",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/storage",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "wuzursched-supabase-storage",
+      "ports": {},
+      "repo_digests": [
+        "local-security/wuzursched-supabase-storage@sha256:06cf297458da107e8c7131830fcaddde8ecab284a8d5b2cd0321488f9f470edd"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "wuzursched-supabase",
+      "compose_service": "studio",
+      "environment_keys": [
+        "AUTH_JWT_SECRET",
+        "DEFAULT_ORGANIZATION_NAME",
+        "DEFAULT_PROJECT_NAME",
+        "EDGE_FUNCTIONS_MANAGEMENT_FOLDER",
+        "ENABLED_FEATURES_LOGS_ALL",
+        "HOSTNAME",
+        "NODE_VERSION",
+        "OPENAI_API_KEY",
+        "PATH",
+        "PGRST_DB_EXTRA_SEARCH_PATH",
+        "PGRST_DB_MAX_ROWS",
+        "PGRST_DB_SCHEMAS",
+        "PG_META_CRYPTO_KEY",
+        "PNPM_HOME",
+        "POSTGRES_DB",
+        "POSTGRES_HOST",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_USER_READ_WRITE",
+        "SNIPPETS_MANAGEMENT_FOLDER",
+        "STUDIO_PG_META_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_PUBLIC_URL",
+        "SUPABASE_PUBLISHABLE_KEY",
+        "SUPABASE_SECRET_KEY",
+        "SUPABASE_SERVICE_KEY",
+        "SUPABASE_URL",
+        "YARN_VERSION"
+      ],
+      "image": "local-security/wuzursched-supabase-studio:emudhra-dd92a5a1a176",
+      "image_id": "sha256:e8c10ead2ccf557f5ecd57bcf43639df199d60623b2e0d99b5297f368d76c77c",
+      "mounts": [
+        {
+          "destination": "/app/edge-functions",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/functions",
+          "type": "bind",
+          "volume": null,
+          "writable": false
+        },
+        {
+          "destination": "/app/snippets",
+          "source": "~/Developer/wuzursched-supabase/docker/volumes/snippets",
+          "type": "bind",
+          "volume": null,
+          "writable": true
+        }
+      ],
+      "name": "wuzursched-supabase-studio",
+      "ports": {},
+      "repo_digests": [
+        "local-security/wuzursched-supabase-studio@sha256:e8c10ead2ccf557f5ecd57bcf43639df199d60623b2e0d99b5297f368d76c77c"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    },
+    {
+      "compose_project": "youremagic",
+      "compose_service": "web",
+      "environment_keys": [
+        "BUN_INSTALL_BIN",
+        "BUN_RUNTIME_TRANSPILER_CACHE_PATH",
+        "NODE_ENV",
+        "PATH",
+        "PORT"
+      ],
+      "image": "youremagic:latest",
+      "image_id": "sha256:3624654faac82d7a6807776d0b53f636a82c170d24f5a3f5a31860045775b304",
+      "mounts": [
+        {
+          "destination": "/app/data",
+          "source": "/var/lib/docker/volumes/youremagic_youremagic-data/_data",
+          "type": "volume",
+          "volume": "youremagic_youremagic-data",
+          "writable": true
+        }
+      ],
+      "name": "youremagic",
+      "ports": {
+        "3025/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "3025"
+          }
+        ]
+      },
+      "repo_digests": [
+        "youremagic@sha256:3624654faac82d7a6807776d0b53f636a82c170d24f5a3f5a31860045775b304"
+      ],
+      "restart": "unless-stopped",
+      "state": "running"
+    }
+  ],
+  "ingress_routes": [
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "sweeper-supabase.bryanhu.com",
+      "service": "http://localhost:8000"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "dashboard.bryanhu.com",
+      "service": "http://localhost:7788"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "images.bryanhu.com",
+      "service": "http://localhost:8080"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "tribe.bryanhu.com",
+      "service": "http://localhost:8010"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "audio.bryanhu.com",
+      "service": "http://localhost:9000"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "church-retreat-supabase.bryanhu.com",
+      "service": "http://localhost:8001"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "inv.bryanhu.com",
+      "service": "http://localhost:8976"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "gallery.bryanhu.com",
+      "service": "http://localhost:8086"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "analytics.bryanhu.com",
+      "service": "http://localhost:3005"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "grindion-supabase.bryanhu.com",
+      "service": "http://localhost:8002"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "grindion.bryanhu.com",
+      "service": "http://localhost:8087"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "wuzursched-supabase.bryanhu.com",
+      "service": "http://localhost:8003"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "quillium-supabase.bryanhu.com",
+      "service": "http://localhost:8004"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "quillium-relay.bryanhu.com",
+      "service": "http://localhost:4000"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "likes.bryanhu.com",
+      "service": "http://localhost:3015"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "attention.bryanhu.com",
+      "service": "http://localhost:3016"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "youremagic.bryanhu.com",
+      "service": "http://localhost:3025"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "claudeslop.bryanhu.com",
+      "service": "http://localhost:4317"
+    },
+    {
+      "config": "~/.cloudflared/config.yml",
+      "hostname": "unblock.bryanhu.com",
+      "service": "http://localhost:8093"
+    },
+    {
+      "config": "~/.cloudflared/ollama.yml",
+      "hostname": "ollama.bryanhu.com",
+      "service": "http://localhost:11435"
+    },
+    {
+      "config": "~/.cloudflared/supabase.yml",
+      "hostname": "supabase.bryanhu.com",
+      "service": "http://localhost:8000"
+    }
+  ],
+  "launch_agents": [
+    {
+      "argument_count": 4,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "/opt/homebrew/bin/sing-box",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.singbox",
+      "plist": "/Library/LaunchDaemons/com.singbox.plist",
+      "run_at_load": true,
+      "scope": "system",
+      "script_paths": []
+    },
+    {
+      "argument_count": 3,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [
+        "PATH"
+      ],
+      "executable": "/opt/homebrew/bin/bash",
+      "interval_seconds": null,
+      "keep_alive": false,
+      "label": "com.wireguard.wg0",
+      "plist": "/Library/LaunchDaemons/com.wireguard.wg0.plist",
+      "run_at_load": true,
+      "scope": "system",
+      "script_paths": []
+    },
+    {
+      "argument_count": 1,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "/Library/PrivilegedHelperTools/dev.orbstack.OrbStack.privhelper",
+      "interval_seconds": null,
+      "keep_alive": false,
+      "label": "dev.orbstack.OrbStack.privhelper",
+      "plist": "/Library/LaunchDaemons/dev.orbstack.OrbStack.privhelper.plist",
+      "run_at_load": false,
+      "scope": "system",
+      "script_paths": []
+    },
+    {
+      "argument_count": 1,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "/opt/homebrew/opt/tailscale/bin/tailscaled",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "homebrew.mxcl.tailscale",
+      "plist": "/Library/LaunchDaemons/homebrew.mxcl.tailscale.plist",
+      "run_at_load": true,
+      "scope": "system",
+      "script_paths": []
+    },
+    {
+      "argument_count": 5,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "/opt/homebrew/bin/cloudflared",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "dev.vanityctl.cloudflare-ollama",
+      "plist": "~/.vanityctl/generated/launchd/dev.vanityctl.cloudflare-ollama.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 4,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "/opt/homebrew/bin/cloudflared",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "dev.vanityctl.cloudflare-tunnel-supabase",
+      "plist": "~/.vanityctl/generated/launchd/dev.vanityctl.cloudflare-tunnel-supabase.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 5,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "/opt/homebrew/bin/cloudflared",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "dev.vanityctl.cloudflare-tunnel",
+      "plist": "~/.vanityctl/generated/launchd/dev.vanityctl.cloudflare-tunnel.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 1,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "~/.local/bin/billion-autodeploy",
+      "interval_seconds": 120,
+      "keep_alive": false,
+      "label": "com.billion.autodeploy",
+      "plist": "~/Library/LaunchAgents/com.billion.autodeploy.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 5,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "/usr/local/bin/docker",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.billion.cortese-import",
+      "plist": "~/Library/LaunchAgents/com.billion.cortese-import.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 8,
+      "calendar": null,
+      "directory": "~/Developer/flux",
+      "environment_keys": [
+        "SSL_CERT_FILE"
+      ],
+      "executable": "~/Developer/flux/.venv12/bin/python",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.billion.flux-api",
+      "plist": "~/Library/LaunchAgents/com.billion.flux-api.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/Developer/flux/api_server.py"
+      ]
+    },
+    {
+      "argument_count": 8,
+      "calendar": null,
+      "directory": "~/.config/billion/supabase-trial/app/apps/nextjs",
+      "environment_keys": [
+        "NODE_ENV"
+      ],
+      "executable": "~/.local/share/billion/security-runtimes/node-v22.23.4-darwin-arm64/bin/node",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.billion.supabase-trial-app",
+      "plist": "~/Library/LaunchAgents/com.billion.supabase-trial-app.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 1,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "~/.local/bin/billion-supervisor",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.billion.supervisor",
+      "plist": "~/Library/LaunchAgents/com.billion.supervisor.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 9,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [
+        "PATH"
+      ],
+      "executable": "~/.local/bin/node",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.billion.translation-proxy",
+      "plist": "~/Library/LaunchAgents/com.billion.translation-proxy.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/.local/share/billion/openai-oauth-2.0.0/node_modules/openai-oauth/dist/cli.js"
+      ]
+    },
+    {
+      "argument_count": 2,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "~/.local/bin/billion-supervisor",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.billion.translations",
+      "plist": "~/Library/LaunchAgents/com.billion.translations.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 2,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [],
+      "executable": "/bin/bash",
+      "interval_seconds": null,
+      "keep_alive": false,
+      "label": "com.bryanhu.big-mac-bootstrap",
+      "plist": "~/Library/LaunchAgents/com.bryanhu.big-mac-bootstrap.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/.big-mac-bootstrap/big-mac-bootstrap.sh"
+      ]
+    },
+    {
+      "argument_count": 2,
+      "calendar": null,
+      "directory": "~/Developer/BigMacDashboard",
+      "environment_keys": [
+        "HOST",
+        "ORIGIN",
+        "PATH",
+        "PORT"
+      ],
+      "executable": "~/Developer/http-security-update-20261021/owned/node-v26.12.1-darwin-arm64/bin/node",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.bryanhu.bigmacdashboard",
+      "plist": "~/Library/LaunchAgents/com.bryanhu.bigmacdashboard.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 6,
+      "calendar": null,
+      "directory": "~",
+      "environment_keys": [],
+      "executable": "/opt/homebrew/bin/cloudflared",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.bryanhu.cloudflared",
+      "plist": "~/Library/LaunchAgents/com.bryanhu.cloudflared.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 5,
+      "calendar": null,
+      "directory": "~/minecraft-server/server",
+      "environment_keys": [
+        "PATH"
+      ],
+      "executable": "/opt/homebrew/opt/openjdk/bin/java",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.bryanhu.minecraft-server",
+      "plist": "~/Library/LaunchAgents/com.bryanhu.minecraft-server.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 2,
+      "calendar": null,
+      "directory": "~",
+      "environment_keys": [
+        "PATH",
+        "QWEN_HOST",
+        "QWEN_PORT",
+        "SSL_CERT_FILE",
+        "TOKENIZERS_PARALLELISM"
+      ],
+      "executable": "~/qwen-audio-server/bin/python",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.bryanhu.qwen-audio-server",
+      "plist": "~/Library/LaunchAgents/com.bryanhu.qwen-audio-server.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/qwen_audio_server.py"
+      ]
+    },
+    {
+      "argument_count": 2,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [
+        "PATH",
+        "PYTORCH_ENABLE_MPS_FALLBACK"
+      ],
+      "executable": "~/.local/share/uv/python/cpython-3.12-macos-aarch64-none/bin/python3",
+      "interval_seconds": 3600,
+      "keep_alive": false,
+      "label": "com.bryanhu.world-model-health",
+      "plist": "~/Library/LaunchAgents/com.bryanhu.world-model-health.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/Developer/world-model-health.py"
+      ]
+    },
+    {
+      "argument_count": 2,
+      "calendar": {
+        "Hour": 3,
+        "Minute": 15
+      },
+      "directory": "",
+      "environment_keys": [
+        "PATH"
+      ],
+      "executable": "/bin/sh",
+      "interval_seconds": null,
+      "keep_alive": false,
+      "label": "com.bryanhu.wuzursched-supabase-backup",
+      "plist": "~/Library/LaunchAgents/com.bryanhu.wuzursched-supabase-backup.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/Developer/wuzursched-supabase/ops/backup.sh"
+      ]
+    },
+    {
+      "argument_count": 1,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [
+        "OLLAMA_AUTH_KEY"
+      ],
+      "executable": "~/ollama-auth-proxy.py",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.ollama.auth-proxy",
+      "plist": "~/Library/LaunchAgents/com.ollama.auth-proxy.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/ollama-auth-proxy.py"
+      ]
+    },
+    {
+      "argument_count": 2,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [
+        "OLLAMA_HOST"
+      ],
+      "executable": "/Applications/Ollama.app/Contents/Resources/ollama",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.ollama.ollama",
+      "plist": "~/Library/LaunchAgents/com.ollama.ollama.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    },
+    {
+      "argument_count": 2,
+      "calendar": null,
+      "directory": "~/Developer/tribev2-api",
+      "environment_keys": [
+        "HF_TOKEN",
+        "PATH",
+        "SSL_CERT_FILE",
+        "TOKENIZERS_PARALLELISM",
+        "TRIBE_CACHE_DIR",
+        "TRIBE_JOBS_DIR",
+        "TRIBE_PORT"
+      ],
+      "executable": "~/Developer/tribev2-api/.venv/bin/python",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "com.tribev2.api",
+      "plist": "~/Library/LaunchAgents/com.tribev2.api.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/Developer/tribev2-api/app.py"
+      ]
+    },
+    {
+      "argument_count": 2,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [
+        "GIT_TERMINAL_PROMPT",
+        "PATH"
+      ],
+      "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "interval_seconds": 60,
+      "keep_alive": false,
+      "label": "com.youremagic.autodeploy",
+      "plist": "~/Library/LaunchAgents/com.youremagic.autodeploy.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": [
+        "~/.local/lib/yourEmagic/autodeploy.py"
+      ]
+    },
+    {
+      "argument_count": 3,
+      "calendar": null,
+      "directory": "",
+      "environment_keys": [
+        "PATH",
+        "RUST_LOG"
+      ],
+      "executable": "~/.local/bin/hostd",
+      "interval_seconds": null,
+      "keep_alive": true,
+      "label": "dev.vanityctl.hostd",
+      "plist": "~/Library/LaunchAgents/dev.vanityctl.hostd.plist",
+      "run_at_load": true,
+      "scope": "user",
+      "script_paths": []
+    }
+  ],
+  "observed_at": "2026-11-02T00:41:38.437652+00:00",
+  "schema": 1,
+  "sources": [
+    {
+      "commit": "1711bf6b77130e68210e875d8d14b28b5d7b2b32",
+      "directory": "~/Developer/BigMacDashboard",
+      "dirty": true,
+      "repository": "https://github.com/ThatXliner/BigMacDashboard"
+    },
+    {
+      "commit": "b2075dd720b2ec34a3e4ee67bb61714c5eb503fd",
+      "directory": "~/Developer/Grindion",
+      "dirty": true,
+      "repository": "https://github.com/ThatXliner/Grindion"
+    },
+    {
+      "commit": "3aa3b8389896f81dd813fdf9176ef3ca122d809e",
+      "directory": "~/Developer/agentmemory-jordan-repro",
+      "dirty": false,
+      "repository": "https://github.com/JordanMcCann/agentmemory"
+    },
+    {
+      "commit": "6b8884c4b32c3d2622475f414b578d074427cabd",
+      "directory": "~/Developer/audiyo",
+      "dirty": true,
+      "repository": "https://github.com/ThatXliner/audiyo"
+    },
+    {
+      "commit": "3e12035532eb85768f1a7cd779832b650c4b2ef9",
+      "directory": "~/Developer/beam-repro",
+      "dirty": false,
+      "repository": "https://github.com/mohammadtavakoli78/BEAM"
+    },
+    {
+      "commit": "8adb61133d2a1e664409711487e627489f394651",
+      "directory": "~/Developer/billion",
+      "dirty": false,
+      "repository": "https://github.com/billion-app/billion"
+    },
+    {
+      "commit": "421f03078ffdc26d18a150f5ff36cab13f6e760c",
+      "directory": "~/Developer/claudeslop",
+      "dirty": false,
+      "repository": "https://github.com/ThatXliner/claudeslop"
+    },
+    {
+      "commit": "1f5ed478decaf6559084c3444d9ed8f7812b7eca",
+      "directory": "~/Developer/cognimem",
+      "dirty": true,
+      "repository": "https://github.com/ThatXliner/cognimem"
+    },
+    {
+      "commit": "5bcd1599755b4f2fae8e5e079e02f0728e174965",
+      "directory": "~/Developer/diamond",
+      "dirty": true,
+      "repository": "https://github.com/eloialonso/diamond"
+    },
+    {
+      "commit": "e3f02248693a79dc8b0ebd62c93683888ddaccfe",
+      "directory": "~/Developer/dreamerv3",
+      "dirty": true,
+      "repository": "https://github.com/danijar/dreamerv3"
+    },
+    {
+      "commit": "09808183ca72c30cbb41b653586f6d0632a4bcca",
+      "directory": "~/Developer/lerobot",
+      "dirty": true,
+      "repository": "https://github.com/huggingface/lerobot"
+    },
+    {
+      "commit": "f392f9f8b8f30caf9edaab73aafdf2312ab3b24c",
+      "directory": "~/Developer/picpeak",
+      "dirty": true,
+      "repository": "https://github.com/PicPeak/picpeak"
+    },
+    {
+      "commit": "362f36f86394e7ffadf091f58c47d9248e4f1b53",
+      "directory": "~/Developer/qbot-src",
+      "dirty": true,
+      "repository": "https://github.com/ThatXliner/qbot"
+    },
+    {
+      "commit": "59172eff5d183fbcbc8d059a27b35a952b48e03e",
+      "directory": "~/Developer/quillium",
+      "dirty": true,
+      "repository": "https://github.com/ThatXliner/Quillium"
+    },
+    {
+      "commit": "637a3f46c732ae55ea7f3541c1a2881e8ef76528",
+      "directory": "~/Developer/supabase",
+      "dirty": true,
+      "repository": "https://github.com/supabase/supabase"
+    },
+    {
+      "commit": "5838b7a22f6a6357a1b1330528baf30ec61eb212",
+      "directory": "~/Developer/sweepr",
+      "dirty": false,
+      "repository": "https://github.com/ThatXliner/sweepr"
+    },
+    {
+      "commit": "888040141b92a97fcfd199474ec6e8208a1c9b31",
+      "directory": "~/Developer/temppromax",
+      "dirty": false,
+      "repository": "https://github.com/ThatXliner/temppromax"
+    },
+    {
+      "commit": "65f2a9bf9e6cc29a0f6df402b99b8a9f73058e01",
+      "directory": "~/Developer/terminus",
+      "dirty": true,
+      "repository": "https://github.com/usetrmnl/terminus"
+    },
+    {
+      "commit": "e7f1fd79e4188637f9b168337c5a219af890a613",
+      "directory": "~/Developer/truememory-artifacts",
+      "dirty": false,
+      "repository": "https://github.com/buildingjoshbetter/TrueMemory"
+    },
+    {
+      "commit": "2f819ff80d499731fb6b265e901682f0a283bf32",
+      "directory": "~/Developer/truememory-repro",
+      "dirty": false,
+      "repository": "https://github.com/buildingjoshbetter/TrueMemory"
+    },
+    {
+      "commit": "a4937812b14df27de6734111c82136c69960919a",
+      "directory": "~/Developer/wuzursched-supabase",
+      "dirty": true,
+      "repository": "https://github.com/supabase/supabase"
+    },
+    {
+      "commit": "63e6d151c2deeff4984d096b41a93b8c2017b44b",
+      "directory": "~/Developer/yourEmagic",
+      "dirty": false,
+      "repository": "https://github.com/ThatXliner/yourEmagic"
+    }
+  ]
+}

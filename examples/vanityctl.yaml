@@ -1,0 +1,18 @@
+# Copy to ~/.vanityctl/config.yaml on a NEW host. Keep credentials outside Git.
+version: 1
+api:
+  listen: 127.0.0.1:7788
+  token_file: ~/.vanityctl/api-token
+  public_read_only: false
+services:
+  my-app:
+    type: compose
+    directory: ~/services/my-app
+    files: [compose.yaml]
+  my-worker:
+    type: process
+    command: /usr/bin/python3
+    args: [server.py]
+    directory: ~/services/my-worker
+    env_file: ~/secrets/my-worker.env
+    restart: on-failure

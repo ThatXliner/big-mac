@@ -1,0 +1,3 @@
+[submodule "vendor/vanityctl"]
+	path = vendor/vanityctl
+	url = https://github.com/ThatXliner/vanityctl.git

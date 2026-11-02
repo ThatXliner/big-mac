@@ -1,0 +1,27 @@
+name: Check public infrastructure
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - run: make check
+      - name: Validate Compose without real credentials
+        env:
+          UNBLOCK_USERPASS: validation:placeholder-only
+        run: docker compose -f services/unblock/compose.yaml config --quiet
+      - name: Install pinned secret scanner
+        run: go install github.com/zricethezav/gitleaks/v8@v8.30.1
+      - name: Scan tracked content and Git history
+        run: PATH="$(go env GOPATH)/bin:$PATH" make secrets
+      - name: Parse optional Nix expressions
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y nix-bin
+          nix-instantiate --parse nix/module.nix >/dev/null
+          nix-instantiate --parse nix/flake.nix >/dev/null

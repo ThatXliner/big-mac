@@ -1,0 +1,13 @@
+[extend]
+useDefault = true
+
+# Default generic-api-key mistakes auth container IMAGE TAGS for credentials.
+# Suppress only this exact metadata line shape in this exact snapshot file.
+[[rules]]
+id = "generic-api-key"
+[[rules.allowlists]]
+description = "Observed local image names with security rebuild hashes"
+condition = "AND"
+paths = ['''(?:^|/)inventory/observed\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"image": "local-security/[A-Za-z0-9_.-]+:emudhra-[0-9a-f]{12}",\s*$''']
