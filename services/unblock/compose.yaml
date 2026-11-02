@@ -7,7 +7,7 @@ services:
       - "127.0.0.1:${UNBLOCK_PORT:-8093}:8080"
     environment:
       PORT: "8080"
-      USERPASS: ${UNBLOCK_USERPASS:?Run scripts/setup-unblock.py first}
+      USERPASS: ${UNBLOCK_USERPASS?Run scripts/setup-unblock.py first}
       RULESET: ${LADDER_RULESET:-https://raw.githubusercontent.com/everywall/ladder-rules/main/ruleset.yaml}
       LOG_URLS: "false"
       NOLOGS: "true"

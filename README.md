@@ -54,6 +54,8 @@ port, image and ruleset in that file; [.env.example](services/unblock/.env.examp
 documents the variables. Publish through your own Cloudflare tunnel using the
 [example config](examples/cloudflared.yml) and route script described in operations.
 The existing installation is at **https://unblock.bryanhu.com**.
+It currently allows anonymous access. To use that mode on your own installation,
+set `UNBLOCK_USERPASS=` in the private `.env` and run `python3 scripts/manage.py up unblock`.
 
 To manage your own apps, copy/adapt [examples/vanityctl.yaml](examples/vanityctl.yaml)
 on a fresh host, or add service fragments to an existing registry. Keep credentials

@@ -78,7 +78,10 @@ local security rebuilds, and several app repos contain uncommitted changes.
 ## Unblock
 
 Ladder is reachable at `https://unblock.bryanhu.com`. Its port is bound to loopback
-and reached through the existing tunnel. Basic auth is required. Setup generates
+and reached through the existing tunnel. The current deployment allows anonymous
+access, as requested by the operator. Set `UNBLOCK_USERPASS=` in the private `.env`
+to disable basic auth, or set `UNBLOCK_USERPASS=username:password` to enable it,
+then run targeted `up`. Setup on a fresh host generates
 a unique login in `services/unblock/.env` with mode 0600, and URL access logging
 is disabled. Retrieve credentials privately over SSH; do not paste the `.env`
 into tickets or public logs.
@@ -88,7 +91,7 @@ python3 scripts/check-unblock.py
 python3 scripts/check-unblock.py --url https://unblock.bryanhu.com
 ```
 
-These check anonymous denial, the authenticated form, and a real proxied page.
+These check the configured access mode, the form, and a real proxied page.
 Some sites still block automated clients or never serve full content; an
 installation health check cannot guarantee results for every publisher.
 
