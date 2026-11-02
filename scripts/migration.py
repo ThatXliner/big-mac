@@ -5,6 +5,7 @@ import datetime
 import json
 import os
 from pathlib import Path
+import plistlib
 import shutil
 import subprocess
 import sys
@@ -33,6 +34,21 @@ def make_plan():
         configs.update(str(p) for p in directory.glob(".env*"))
         # Includes untracked app configs and build contexts; restore this before Compose.
         sources.add(str(directory))
+    # The registry can name extra overlays not present in every container label.
+    # Resolve it privately; descriptions/environment values are never exported.
+    registry = json.loads(subprocess.check_output(["vanityctl", "list", "--json"], text=True))
+    for service in registry:
+        spec = json.loads(subprocess.check_output(["vanityctl", "describe", service["name"], "--json"], text=True))
+        directory = Path(spec.get("directory") or str(home)).expanduser()
+        if spec.get("type") == "compose":
+            files = spec.get("files") or ([spec["file"]] if spec.get("file") else [])
+            for filename in files:
+                path = Path(filename).expanduser()
+                configs.add(str(path if path.is_absolute() else directory / path))
+            sources.add(str(directory))
+        if spec.get("env_file"):
+            path = Path(spec["env_file"]).expanduser()
+            configs.add(str(path if path.is_absolute() else directory / path))
     bind_dirs, volumes = set(), set()
     for c in d["containers"]:
         for m in c["mounts"]:
@@ -55,13 +71,24 @@ def make_plan():
         directory = agent["directory"]
         if directory.startswith("~/") and Path(directory).expanduser().is_dir():
             sources.add(expand(directory))
+        # Config/argument files remain private, including paths omitted by metadata export.
+        with Path(agent["plist"]).expanduser().open("rb") as stream:
+            raw = plistlib.load(stream)
+        for argument in raw.get("ProgramArguments", []):
+            if not isinstance(argument, str):
+                continue
+            candidate = Path(argument.partition("=")[2] if argument.startswith("--") and "=" in argument else argument).expanduser()
+            if candidate.is_absolute() and candidate.is_file():
+                # System binaries come from package managers; preserve local files and configs.
+                if str(candidate).startswith(str(home) + "/") or candidate.suffix in {".json", ".yml", ".yaml", ".toml", ".conf", ".env"}:
+                    configs.add(str(candidate))
     # Native data/services that aren't represented by Docker bind mounts.
     native = [str(home / p) for p in ["minecraft-server", ".ollama", "qwen-audio-server",
               "qwen-omni", "qwen2_audio_infer.py", "qwen_audio_server.py", "qwen_omni_infer.py",
               "ollama-auth-proxy.py", "ultravox_infer.py", "ultravox-env", ".config/sing-box",
               ".local/share/billion", ".config/billion", ".cache/huggingface"]
               if (home / p).exists()]
-    native += [p for p in ["/opt/homebrew/etc/wireguard", "/opt/homebrew/etc/sing-box"] if Path(p).exists()]
+    configs.update(p for p in ["/opt/homebrew/etc/wireguard", "/opt/homebrew/etc/sing-box"] if Path(p).exists())
     return {"created_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             "config_paths": sorted(p for p in configs if Path(p).exists()),
             "source_paths": sorted(sources), "bind_data_paths": sorted(bind_dirs),
