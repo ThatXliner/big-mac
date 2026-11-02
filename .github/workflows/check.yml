@@ -23,5 +23,5 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y nix-bin
-          nix-instantiate --parse nix/module.nix >/dev/null
-          nix-instantiate --parse nix/flake.nix >/dev/null
+          nix-instantiate --store dummy:// --parse nix/module.nix >/dev/null
+          nix-instantiate --store dummy:// --parse nix/flake.nix >/dev/null
