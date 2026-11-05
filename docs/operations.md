@@ -111,6 +111,34 @@ For rollback, restore the indicated config backup, restart that agent, and remov
 only the newly created DNS record through your Cloudflare account. Other tunnel
 routes can briefly reconnect during an agent restart.
 
+### Redirect aliases
+
+`https://12ft.bryanhu.com` permanently redirects to `https://unblock.bryanhu.com`,
+preserving the path, query string and HTTP method (308). The loopback server on
+port 8094 is the registered native service `unblock-alias`, supervised by
+vanityctl/launchd. It writes no access logs and uses the existing primary tunnel.
+
+```sh
+vanityctl agent-context unblock-alias --json
+vanityctl status unblock-alias --json
+curl -I https://12ft.bryanhu.com/
+```
+
+To reproduce this on a new host, or create your own alias, choose an unused port
+and your destination origin, then add the incoming hostname to your existing
+tunnel:
+
+```sh
+python3 scripts/setup-redirect.py unblock-alias https://unblock.example.com --port 8094
+python3 scripts/tunnel-route.py 12ft.example.com 8094 --restart-label YOUR.EXISTING.LABEL
+```
+
+The setup helper records the Python executable and service paths for the current
+host in its private vanityctl registry. It starts only the named redirect. Keep
+that service running when moving the tunnel; the NixOS example does not yet
+include this optional alias. To remove it, stop `unblock-alias` with vanityctl,
+remove its registry fragment, and remove only its DNS record and tunnel ingress.
+
 ## Public metadata and secrets
 
 `scripts/inventory.py` exports image references/digests, mount topology, port
